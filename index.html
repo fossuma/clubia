@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Club de la IA</title>
+  <meta
+    name="description"
+    content="Club de la IA: sesiones, propuestas y recursos para debatir el impacto real de la inteligencia artificial."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #f4f6f3;
+      --bg-soft: #eaf1ea;
+      --surface: #ffffff;
+      --surface-muted: #f5faf6;
+      --ink: #132126;
+      --ink-soft: #44606a;
+      --accent: #008b8f;
+      --accent-2: #ff7a32;
+      --border: #d4e3dc;
+      --shadow: 0 20px 55px rgba(12, 33, 40, 0.14);
+      --radius-lg: 22px;
+      --radius-md: 16px;
+      --radius-sm: 12px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Manrope", "Segoe UI", sans-serif;
+      line-height: 1.55;
+      background:
+        radial-gradient(1200px 700px at -10% 0%, rgba(0, 139, 143, 0.2), transparent 56%),
+        radial-gradient(1000px 650px at 115% 14%, rgba(255, 122, 50, 0.16), transparent 60%),
+        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 56%, #f9fcf9 100%);
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(19, 33, 38, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(19, 33, 38, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+      opacity: 0.4;
+    }
+
+    .container {
+      width: min(var(--max-width), 92vw);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      margin-top: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1.2rem;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(212, 227, 220, 0.8);
+      border-radius: 14px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 28px rgba(10, 30, 32, 0.08);
+    }
+
+    .brand {
+      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .topbar a {
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .hero {
+      margin-top: 1.4rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.6rem, 4vw, 3rem);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 1.4rem;
+      animation: rise 700ms ease-out both;
+    }
+
+    .hero .label {
+      width: fit-content;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: linear-gradient(92deg, rgba(0, 139, 143, 0.12), rgba(255, 122, 50, 0.13));
+      border: 1px solid rgba(0, 139, 143, 0.25);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0d5d61;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 4.1rem);
+      max-width: 16ch;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      max-width: 66ch;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 1.55vw, 1.18rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      border: 0;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.75rem 1.25rem;
+      font-weight: 700;
+      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    }
+
+    .btn-primary {
+      color: #f8ffff;
+      background: linear-gradient(125deg, #00757a, #009ba0);
+      box-shadow: 0 10px 28px rgba(0, 139, 143, 0.35);
+    }
+
+    .btn-secondary {
+      color: var(--ink);
+      background: #f7f7f0;
+      border: 1px solid #e5dfcf;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .stats {
+      margin-top: 0.25rem;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .stat {
+      background: var(--surface-muted);
+      border: 1px solid #d8e8df;
+      border-radius: var(--radius-sm);
+      padding: 0.8rem 0.9rem;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+      font-size: 1.45rem;
+      line-height: 1.05;
+      color: #0a6770;
+    }
+
+    .stat span {
+      color: #4d646d;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    main {
+      margin-top: 1.25rem;
+      display: grid;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: clamp(1rem, 2.5vw, 1.45rem);
+      box-shadow: 0 14px 35px rgba(20, 36, 40, 0.08);
+      animation: rise 650ms ease-out both;
+    }
+
+    .section-title {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem;
+      margin-bottom: 0.45rem;
+    }
+
+    h2 {
+      font-size: clamp(1.45rem, 3vw, 2.05rem);
+      letter-spacing: -0.01em;
+    }
+
+    .kicker {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #4d6269;
+      font-weight: 700;
+    }
+
+    .section-desc {
+      color: var(--ink-soft);
+      margin-bottom: 0.95rem;
+    }
+
+    .topics {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .topic {
+      background: #fcfffc;
+      border: 1px solid #d4e4dc;
+      border-radius: 14px;
+      padding: 0.95rem;
+      min-height: 100%;
+      display: grid;
+      gap: 0.45rem;
+      animation: rise 700ms ease-out both;
+    }
+
+    .topic:nth-child(1) { animation-delay: 50ms; }
+    .topic:nth-child(2) { animation-delay: 90ms; }
+    .topic:nth-child(3) { animation-delay: 130ms; }
+    .topic:nth-child(4) { animation-delay: 170ms; }
+    .topic:nth-child(5) { animation-delay: 210ms; }
+    .topic:nth-child(6) { animation-delay: 250ms; }
+    .topic:nth-child(7) { animation-delay: 290ms; }
+    .topic:nth-child(8) { animation-delay: 330ms; }
+    .topic:nth-child(9) { animation-delay: 370ms; }
+
+    .topic .meta {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.055em;
+      font-weight: 700;
+      color: #0e6e74;
+    }
+
+    .topic h3 {
+      font-size: 1.09rem;
+      letter-spacing: -0.01em;
+    }
+
+    .topic p {
+      color: #557077;
+      font-size: 0.95rem;
+    }
+
+    .resource {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    pre {
+      background: #0f2d35;
+      color: #e6f7f7;
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      overflow-x: auto;
+      border: 1px solid #184853;
+      font-family: "Cascadia Code", "Consolas", monospace;
+      font-size: 0.93rem;
+    }
+
+    .resource a {
+      color: #0c636b;
+      font-weight: 700;
+      text-underline-offset: 0.18em;
+    }
+
+    footer {
+      padding: 0.2rem 0 2rem;
+      color: #4f686f;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 850px) {
+      .topics {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand">Club <span>de la IA</span></div>
+      <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio oficial</a>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="label">Comunidad y debate</span>
+      <h1 id="hero-title">Club de la IA</h1>
+      <p>
+        Documentos de sesiones, propuestas, proyectos, riesgos y usos responsables
+        de la inteligencia artificial en nuestro entorno academico.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#kickoff">Ver propuestas del kickoff</a>
+        <a class="btn btn-secondary" href="#enlaces">Contribuir al repo</a>
+      </div>
+
+      <div class="stats" aria-label="Resumen de actividad">
+        <article class="stat">
+          <strong>1</strong>
+          <span>Sesion registrada</span>
+        </article>
+        <article class="stat">
+          <strong>5</strong>
+          <span>Propuestas iniciales</span>
+        </article>
+        <article class="stat">
+          <strong>2026</strong>
+          <span>Ano de lanzamiento</span>
+        </article>
+      </div>
+    </section>
+
+    <main>
+      <section id="kickoff" class="section-card" aria-labelledby="kickoff-title">
+        <div class="section-title">
+          <span class="kicker">Sesion 1.1</span>
+          <h2 id="kickoff-title">Kickoff - 14/04/2026</h2>
+        </div>
+        <p class="section-desc">
+          Primera actividad del club. Estas son las lineas de trabajo que se acordaron para sesiones publicas, experimentos y
+          recursos para la escuela.
+        </p>
+
+        <ul class="topics" aria-label="Propuestas del kickoff">
+          <li class="topic">
+            <span class="meta">Sesion publica</span>
+            <h3>Dependencia cognitiva de la IA </h3>
+            <p>Propuesta de Lucía. Buscar ponente de Psicología (Dpto. Personalidad)</p>
+          </li>
+          <li class="topic">
+            <span class="meta">Sesion publica</span>
+            <h3>Oportunidades y amenazas para el sector informatico</h3>
+            <p>Propuesta de Cristian para debatir impacto laboral y tecnico de la IA.</p>
+          </li>
+          <li class="topic">
+            <span class="meta">Sesion publica</span>
+            <h3>Ciberseguridad post-IA</h3>
+            <p>Propuesta de Victor con intervencion de Ale.</p>
+          </li>
+          <li class="topic">
+            <span class="meta">Sesion publica</span>
+            <h3>Que nos enseña la IA y limites en tareas creativas</h3>
+            <p>Propuesta de Celia y Victor, con intervencion de FV y referencia al documental AlphaFold.</p>
+          </li>
+          <li class="topic">
+            <span class="meta">Sesion publica</span>
+            <h3>Etica en el uso de la IA generativa</h3>
+            <p>Propuesta de Hugo. Buscar ponente (Victor Munoz).</p>
+          </li>
+          <li class="topic">
+            <span class="meta">Proyecto educativo</span>
+            <h3>Manual de uso de la IA y curso cero</h3>
+            <p>Crear una guia para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="enlaces" class="section-card resource" aria-labelledby="enlaces-title">
+        <div class="section-title">
+          <span class="kicker">Herramientas</span>
+          <h2 id="enlaces-title">Enlaces y contribucion</h2>
+        </div>
+        <p class="section-desc">
+          Para participar en la documentacion del club, clona el repositorio y comparte propuestas para siguientes sesiones.
+        </p>
+        <pre><code>git clone https://github.com/umafoss/clubia.git</code></pre>
+        <p>
+          Si ya formas parte del club, puedes abrir issues o pull requests en
+          <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">github.com/umafoss/clubia</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Club de la IA · Documentacion viva de sesiones, debates y proyectos.
+    </footer>
+  </div>
+</body>
+</html>
