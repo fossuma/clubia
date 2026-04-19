@@ -250,6 +250,98 @@
       font-weight: 600;
     }
 
+    .posters-section {
+      margin-top: 1.2rem;
+      animation: rise 680ms ease-out both;
+    }
+
+    .poster-grid {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .poster-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      padding: 0.9rem;
+      border: 1px solid #d2e3db;
+      border-radius: 14px;
+      background: linear-gradient(150deg, #f8fdf9, #eef6f2 55%, #eaf5f5);
+    }
+
+    .poster-card img {
+      width: min(270px, 100%);
+      height: auto;
+      display: block;
+      justify-self: start;
+      border-radius: 10px;
+      border: 1px solid #d3e1d9;
+      background: #ffffff;
+    }
+
+    .poster-content {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .poster-badge {
+      width: fit-content;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+      color: #0d646a;
+      background: rgba(0, 139, 143, 0.11);
+      border: 1px solid rgba(0, 139, 143, 0.27);
+      border-radius: 999px;
+      padding: 0.26rem 0.6rem;
+    }
+
+    .poster-content h3 {
+      font-size: clamp(1.2rem, 2.1vw, 1.55rem);
+      letter-spacing: -0.01em;
+    }
+
+    .poster-meta {
+      list-style: none;
+      display: grid;
+      gap: 0.28rem;
+      color: #405c64;
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
+
+    .poster-meta strong {
+      color: #113f49;
+    }
+
+    .poster-badge-link {
+      text-decoration: none;
+      color: #0d646a;
+    }
+
+    .poster-badge-link:hover {
+      border-color: rgba(0, 139, 143, 0.45);
+      background: rgba(0, 139, 143, 0.16);
+    }
+
+    .sessions-shell {
+      display: grid;
+      gap: 1.1rem;
+      padding: clamp(0.65rem, 1.8vw, 0.95rem);
+      border: 1px dashed #c5d9d0;
+      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, #f8fcf9, #edf6f1);
+    }
+
+    #kickoff:target,
+    #sesion-2:target {
+      outline: 2px solid rgba(0, 139, 143, 0.34);
+      outline-offset: 3px;
+    }
+
     main {
       margin-top: 1.25rem;
       display: grid;
@@ -408,6 +500,7 @@
         right: -4.8rem;
         top: -3.2rem;
       }
+
     }
   </style>
 </head>
@@ -437,8 +530,8 @@
 
       <div class="stats" aria-label="Resumen de actividad">
         <article class="stat">
-          <strong>1</strong>
-          <span>Sesion registrada</span>
+          <strong>2</strong>
+          <span>Sesiones registradas</span>
         </article>
         <article class="stat">
           <strong>5</strong>
@@ -451,50 +544,95 @@
       </div>
     </section>
 
-    <main>
-      <section id="kickoff" class="section-card" aria-labelledby="kickoff-title">
-        <div class="section-title">
-          <span class="kicker">Sesion 1.1</span>
-          <h2 id="kickoff-title">Kickoff - 14/04/2026</h2>
-        </div>
-        <p class="section-desc">
-          Primera actividad del club. Estas son las lineas de trabajo que se acordaron para sesiones publicas, experimentos y
-          recursos para la escuela.
-        </p>
+    <section id="carteles" class="section-card posters-section" aria-labelledby="carteles-title">
+      <div class="section-title">
+        <span class="kicker">Proximas reuniones</span>
+        <h2 id="carteles-title">Carteles informativos</h2>
+      </div>
+      <p class="section-desc">
+        Aquí iremos publicando los carteles de reuniones del club con la información clave de cada sesión.
+      </p>
 
-        <ul class="topics" aria-label="Propuestas del kickoff">
-          <li class="topic">
-            <span class="meta">Sesion publica</span>
-            <h3>Dependencia cognitiva de la IA </h3>
-            <p>Propuesta de Lucía. Buscar ponente de Psicología (Dpto. Personalidad)</p>
-          </li>
-          <li class="topic">
-            <span class="meta">Sesion publica</span>
-            <h3>Oportunidades y amenazas para el sector informatico</h3>
-            <p>Propuesta de Cristian para debatir impacto laboral y tecnico de la IA.</p>
-          </li>
-          <li class="topic">
-            <span class="meta">Sesion publica</span>
-            <h3>Ciberseguridad post-IA</h3>
-            <p>Propuesta de Victor con intervencion de Ale.</p>
-          </li>
-          <li class="topic">
-            <span class="meta">Sesion publica</span>
-            <h3>Que nos enseña la IA y limites en tareas creativas</h3>
-            <p>Propuesta de Celia y Victor, con intervencion de FV y referencia al documental AlphaFold.</p>
-          </li>
-          <li class="topic">
-            <span class="meta">Sesion publica</span>
-            <h3>Etica en el uso de la IA generativa</h3>
-            <p>Propuesta de Hugo. Buscar ponente (Victor Muñoz).</p>
-          </li>
-          <li class="topic">
-            <span class="meta">Proyecto educativo</span>
-            <h3>Manual de uso de la IA y curso cero</h3>
-            <p>Crear una guia para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</p>
-          </li>
-        </ul>
-      </section>
+      <div class="poster-grid" aria-label="Carteles de reuniones">
+        <article class="poster-card">
+          <img src="images/logo1debate.png" alt="Logo del primer debate del club" />
+          <div class="poster-content">
+            <a class="poster-badge poster-badge-link" href="#sesion-2">Sesion anunciada</a>
+            <h3>Dependencia cognitiva de la IA y su implicacion en el aprendizaje</h3>
+            <ul class="poster-meta">
+              <li><strong>Fecha:</strong> 23/04/2026</li>
+              <li><strong>Hora:</strong> 19:30</li>
+              <li><strong>Lugar:</strong> Sala de reuniones B</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <main>
+      <div class="sessions-shell" aria-label="Marco integrado de sesiones 1 y 2">
+        <section id="kickoff" class="section-card" aria-labelledby="kickoff-title">
+          <div class="section-title">
+            <span class="kicker">Sesion 1</span>
+            <h2 id="kickoff-title">Kickoff - 14/04/2026</h2>
+          </div>
+          <p class="section-desc">
+            Primera actividad del club. Estas son las lineas de trabajo que se acordaron para sesiones publicas, experimentos y
+            recursos para la escuela.
+          </p>
+
+          <ul class="topics" aria-label="Propuestas del kickoff">
+            <li class="topic">
+              <span class="meta">Sesion publica</span>
+              <h3>Dependencia cognitiva de la IA </h3>
+              <p>Propuesta de Lucía. Buscar ponente de Psicología (Dpto. Personalidad)</p>
+            </li>
+            <li class="topic">
+              <span class="meta">Sesion publica</span>
+              <h3>Oportunidades y amenazas para el sector informatico</h3>
+              <p>Propuesta de Cristian para debatir impacto laboral y tecnico de la IA.</p>
+            </li>
+            <li class="topic">
+              <span class="meta">Sesion publica</span>
+              <h3>Ciberseguridad post-IA</h3>
+              <p>Propuesta de Victor con intervencion de Ale.</p>
+            </li>
+            <li class="topic">
+              <span class="meta">Sesion publica</span>
+              <h3>Que nos enseña la IA y limites en tareas creativas</h3>
+              <p>Propuesta de Celia y Victor, con intervencion de FV y referencia al documental AlphaFold.</p>
+            </li>
+            <li class="topic">
+              <span class="meta">Sesion publica</span>
+              <h3>Etica en el uso de la IA generativa</h3>
+              <p>Propuesta de Hugo. Buscar ponente (Victor Muñoz).</p>
+            </li>
+            <li class="topic">
+              <span class="meta">Proyecto educativo</span>
+              <h3>Manual de uso de la IA y curso cero</h3>
+              <p>Crear una guia para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="sesion-2" class="section-card" aria-labelledby="sesion-2-title">
+          <div class="section-title">
+            <span class="kicker">Sesion 2</span>
+            <h2 id="sesion-2-title">Dependencia cognitiva</h2>
+          </div>
+          <p class="section-desc">
+            Sesión en preparación. Este espacio queda pendiente hasta tener información confirmada.
+          </p>
+
+          <ul class="topics" aria-label="Propuestas de la sesion 2">
+            <li class="topic">
+              <span class="meta">Contenido pendiente</span>
+              <h3>Dependencia cognitiva de la IA</h3>
+              <p>Sin información disponible por el momento.</p>
+            </li>
+          </ul>
+        </section>
+      </div>
 
       <section id="enlaces" class="section-card resource" aria-labelledby="enlaces-title">
         <div class="section-title">
