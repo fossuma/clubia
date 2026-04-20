@@ -1,2 +1,2 @@
-sesiones/20260423_dependencia_ia/video.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+sesiones/20260423_dependencia_ia/video.mp4 filter=lfs diff=lfs merge=lfs -text

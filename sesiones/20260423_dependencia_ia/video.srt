@@ -1,0 +1,1276 @@
+1
+00:00:23,000 --> 00:00:24,880
+Si usan ChatGPT,
+
+2
+00:00:25,480 --> 00:00:31,180
+¿cuándo fue la última vez que tomaron una decisión importante sin consultarlo?
+
+3
+00:00:31,180 --> 00:00:33,900
+¿Escribir un correo en inglés con su propia mano?
+
+4
+00:00:33,900 --> 00:00:37,500
+¿Buscar una aguja en el pajar de Google por su cuenta?
+
+5
+00:00:37,500 --> 00:00:39,340
+Si son como yo, hace mucho tiempo.
+
+6
+00:00:39,740 --> 00:00:42,340
+Este chatbot que, en su origen, respondía preguntas triviales,
+
+7
+00:00:42,920 --> 00:00:46,900
+se convierte poco a poco en nuestro asistente multitarea y nuestro confidente.
+
+8
+00:00:47,540 --> 00:00:51,540
+Le delegamos cada vez más y vemos videos mientras él trabaja.
+
+9
+00:00:52,220 --> 00:00:54,840
+Y es evidente que ver sus tareas, a veces ingratas,
+
+10
+00:00:55,340 --> 00:00:59,500
+realizadas ahora en pocos minutos, tiene algo de placentero.
+
+11
+00:00:59,960 --> 00:01:05,280
+Pero ¿alguna vez se han preguntado cuáles son las consecuencias a largo plazo de esta magia?
+
+12
+00:01:05,280 --> 00:01:07,960
+¿Han pensado en el escenario donde, en unos años,
+
+13
+00:01:08,460 --> 00:01:11,560
+tras haber perdido progresivamente todas sus capacidades,
+
+14
+00:01:11,560 --> 00:01:12,900
+su cerebro,
+
+15
+00:01:12,920 --> 00:01:14,980
+se haya atrofiado?
+
+16
+00:01:14,980 --> 00:01:17,600
+En realidad, la pregunta que debería preocuparnos a todos
+
+17
+00:01:18,060 --> 00:01:19,620
+no es que la IA pierda el control,
+
+18
+00:01:20,140 --> 00:01:22,280
+sino que se vuelva tan indispensable
+
+19
+00:01:22,280 --> 00:01:24,980
+que seamos incapaces de hacer nada.
+
+20
+00:01:25,540 --> 00:01:27,260
+El peligro que realmente nos acecha
+
+21
+00:01:27,800 --> 00:01:31,540
+es que la humanidad se vuelva completamente estúpida.
+
+22
+00:01:40,540 --> 00:01:44,020
+Y lo interesante es que esto no es solo un fenómeno escolar.
+
+23
+00:01:44,380 --> 00:01:48,420
+En el lado de los desarrolladores, estamos empezando a ver a managers dando la voz de alarma
+
+24
+00:01:48,420 --> 00:01:52,700
+porque los desarrolladores junior ya no saben programar.
+
+25
+00:01:53,340 --> 00:01:55,380
+Bueno, en realidad es un poco más sutil que eso.
+
+26
+00:01:55,680 --> 00:02:01,240
+Y yo mismo lo viví con Antoine, quien entró en Micorp como becario.
+
+27
+00:02:01,640 --> 00:02:02,220
+Antoine es un poco más sutil que eso.
+
+28
+00:02:02,220 --> 00:02:03,760
+Es ingeniero en gestión de proyectos.
+
+29
+00:02:04,360 --> 00:02:07,120
+Pero contrariamente a lo que el título de ingeniero puede hacer creer,
+
+30
+00:02:07,600 --> 00:02:09,760
+no tiene formación profunda en desarrollo.
+
+31
+00:02:10,280 --> 00:02:13,960
+Así que, después de sus estudios, decidió aprender a programar de forma autodidacta.
+
+32
+00:02:14,300 --> 00:02:17,140
+Empezó por proyectos sencillos, como crear sitios web.
+
+33
+00:02:17,800 --> 00:02:21,040
+Y tras sus primeros proyectos, incluso se lanzó como freelance.
+
+34
+00:02:21,740 --> 00:02:25,580
+Cuando llegó la IA, fue el inicio de una bonita historia de amor.
+
+35
+00:02:26,180 --> 00:02:29,880
+La IA le dio la confianza para intentar proyectos aún más ambiciosos
+
+36
+00:02:29,880 --> 00:02:32,200
+y, bastante lógicamente, asumiendo proyectos
+
+37
+00:02:32,220 --> 00:02:35,880
+cada vez más complejos, Antoine fue ganando en competencias.
+
+38
+00:02:36,320 --> 00:02:39,860
+Por ejemplo, ya ves, si en un proyecto me piden hacer una página de pago
+
+39
+00:02:39,860 --> 00:02:41,860
+y yo nunca he hecho una página de pago,
+
+40
+00:02:42,760 --> 00:02:46,000
+sé que antes de aceptar el proyecto, puedo preguntarle a ChatGPT
+
+41
+00:02:46,000 --> 00:02:49,720
+adónde me va a llevar, qué tecnología habrá que usar más o menos,
+
+42
+00:02:49,840 --> 00:02:51,420
+qué hay debajo del iceberg.
+
+43
+00:02:51,800 --> 00:02:54,320
+Y sé que incluso una vez aceptado el proyecto,
+
+44
+00:02:54,800 --> 00:02:58,920
+tendré esa ayuda al lado para orientarme y guiarme en las partes más complicadas.
+
+45
+00:02:59,760 --> 00:03:02,060
+Excepto que, cuando le confié el desarrollo,
+
+46
+00:03:02,160 --> 00:03:02,200
+me dije que iba a hacer un proyecto de pago.
+
+47
+00:03:02,200 --> 00:03:06,020
+Al hablar de una herramienta web que implicaba usar tanto Vue como Nuxt,
+
+48
+00:03:06,640 --> 00:03:07,760
+tuvimos un pequeño problema.
+
+49
+00:03:08,460 --> 00:03:11,620
+Antoine se encontró con unos cuarenta archivos
+
+50
+00:03:11,620 --> 00:03:14,540
+de los cuales el 90% estaban escritos por la IA.
+
+51
+00:03:14,960 --> 00:03:19,360
+Él iba y venía entre la interfaz web y el editor de código,
+
+52
+00:03:19,780 --> 00:03:21,600
+a la manera de un director de orquesta.
+
+53
+00:03:22,260 --> 00:03:23,480
+Blablablá, codifico, codifico.
+
+54
+00:03:24,300 --> 00:03:27,240
+Entonces le digo a la IA: este botón no me convence,
+
+55
+00:03:27,300 --> 00:03:30,400
+me gustaría que lo mueva al otro lado y que sea azul
+
+56
+00:03:30,400 --> 00:03:31,540
+cuando paso el ratón por encima.
+
+57
+00:03:31,540 --> 00:03:34,440
+Esos datos, me gustaría que los tratara de forma diferente
+
+58
+00:03:34,440 --> 00:03:36,200
+y que los muestre de tal manera
+
+59
+00:03:36,200 --> 00:03:39,220
+o que active esto cuando se realice tal acción
+
+60
+00:03:39,220 --> 00:03:42,180
+hasta que todo encaje en el pliego de condiciones,
+
+61
+00:03:42,480 --> 00:03:44,160
+en el objetivo que nos hemos fijado.
+
+62
+00:03:44,440 --> 00:03:47,120
+Pero cuanto más le pedía a Antoine que añadiera funcionalidades,
+
+63
+00:03:47,660 --> 00:03:49,440
+más difícil se volvía para él.
+
+64
+00:03:50,100 --> 00:03:52,400
+Hasta el punto en que se vio ahogado
+
+65
+00:03:52,400 --> 00:03:54,860
+bajo una montaña de código ilegible.
+
+66
+00:03:55,540 --> 00:03:58,560
+Código generado por la IA, imposible de depurar
+
+67
+00:03:58,560 --> 00:04:00,440
+porque era demasiado verboso.
+
+68
+00:04:00,440 --> 00:04:01,480
+Nos encontramos...
+
+69
+00:04:01,480 --> 00:04:03,860
+en una reunión, y para diagnosticar el problema,
+
+70
+00:04:04,080 --> 00:04:05,540
+empecé a hacer preguntas.
+
+71
+00:04:05,900 --> 00:04:09,120
+Así que avanzo en el proyecto, todo va bien,
+
+72
+00:04:09,680 --> 00:04:11,300
+hasta que llegamos a un problema
+
+73
+00:04:11,300 --> 00:04:13,020
+que la IA no logra resolver.
+
+74
+00:04:14,000 --> 00:04:16,200
+Le digo: inténtalo de nuevo, prueba otro método,
+
+75
+00:04:16,880 --> 00:04:19,020
+no hay manera, estamos en un callejón sin salida.
+
+76
+00:04:19,760 --> 00:04:21,480
+Y entonces, cuando estamos atascados así,
+
+77
+00:04:21,540 --> 00:04:23,900
+¿qué hacemos? Le preguntamos a Mickaël.
+
+78
+00:04:24,660 --> 00:04:26,860
+Mickaël empieza a hacerme preguntas sobre el proyecto.
+
+79
+00:04:29,180 --> 00:04:30,860
+Y nos damos cuenta de que...
+
+80
+00:04:31,480 --> 00:04:32,440
+muy confuso en mi cabeza,
+
+81
+00:04:33,280 --> 00:04:35,560
+no he entendido las bases del problema.
+
+82
+00:04:36,060 --> 00:04:36,980
+Los fundamentos del asunto.
+
+83
+00:04:37,480 --> 00:04:40,160
+Esta aventura, evidentemente nada grave,
+
+84
+00:04:40,380 --> 00:04:44,020
+con Antoine, parece confirmar lo que sospechábamos desde el principio.
+
+85
+00:04:44,880 --> 00:04:46,800
+La IA permite obtener resultados,
+
+86
+00:04:47,380 --> 00:04:48,580
+pero sin aprender.
+
+87
+00:04:48,980 --> 00:04:51,620
+Y peor aún, sin entender lo que se produce.
+
+88
+00:05:00,620 --> 00:05:02,880
+Y no sería la primera vez que una herramienta digital
+
+89
+00:05:02,880 --> 00:05:04,660
+tiene efectos secundarios ocultos.
+
+90
+00:05:05,540 --> 00:05:08,300
+Pensándolo bien, el GPS, en circunstancias normales,
+
+91
+00:05:08,300 --> 00:05:10,000
+cuando descubres un lugar nuevo,
+
+92
+00:05:10,060 --> 00:05:12,860
+el hipocampo se activa para cartografiar el entorno.
+
+93
+00:05:13,060 --> 00:05:16,440
+Activa una red de neuronas para memorizar cada punto de referencia.
+
+94
+00:05:17,020 --> 00:05:18,640
+Por eso los taxistas londinenses,
+
+95
+00:05:18,940 --> 00:05:21,760
+que deben conocer de memoria 25.000 nombres de calles,
+
+96
+00:05:22,100 --> 00:05:25,760
+tienen un hipocampo hipertrofiado en comparación con el resto de la población.
+
+97
+00:05:26,260 --> 00:05:29,580
+Pero usar un GPS exime al hipocampo de trabajar.
+
+98
+00:05:30,080 --> 00:05:33,180
+Sin activación neuronal, sin rememoración por la noche.
+
+99
+00:05:33,180 --> 00:05:35,460
+En resumen, sin mapa mental.
+
+100
+00:05:35,860 --> 00:05:38,100
+Es lo que se llama el efecto Google.
+
+101
+00:05:38,500 --> 00:05:40,020
+Con Internet, ya no es necesario conocer
+
+102
+00:05:40,020 --> 00:05:42,780
+de memoria las fechas de vida y muerte del Imperio romano.
+
+103
+00:05:43,080 --> 00:05:46,040
+Basta con abrir una página de Wikipedia para verificarlo.
+
+104
+00:05:46,440 --> 00:05:49,740
+En resumen, antes de Internet, el hipocampo tenía que activar y reforzar
+
+105
+00:05:49,840 --> 00:05:52,920
+una red de neuronas diferentes para codificar cada información.
+
+106
+00:05:53,520 --> 00:05:58,500
+Mientras que hoy activa una única red que memoriza a Google como a un amigo.
+
+107
+00:05:58,980 --> 00:06:01,560
+El resultado es que el día que se cae su router,
+
+108
+00:06:01,820 --> 00:06:04,500
+descubren que se han convertido en un pez de colores.
+
+109
+00:06:05,160 --> 00:06:06,980
+Después de todo, ¿es tan grave?
+
+110
+00:06:07,500 --> 00:06:09,940
+En la práctica, un corte de red es raro.
+
+111
+00:06:10,380 --> 00:06:11,380
+No dura mucho tiempo.
+
+112
+00:06:11,680 --> 00:06:15,420
+Excepto que el efecto Google tiene un segundo efecto perverso.
+
+113
+00:06:15,760 --> 00:06:18,660
+Porque la información que almacenamos en nuestra memoria orgánica
+
+114
+00:06:19,140 --> 00:06:21,180
+sirve de materia prima.
+
+115
+00:06:21,720 --> 00:06:25,320
+Cada vez que reflexionamos, la corteza prefrontal solicita al hipocampo
+
+116
+00:06:25,600 --> 00:06:28,980
+a la manera de un bibliotecario que busca una selección de libros
+
+117
+00:06:28,980 --> 00:06:30,420
+en una inmensa biblioteca.
+
+118
+00:06:31,120 --> 00:06:33,000
+Navega por los recuerdos almacenados en el cerebro.
+
+119
+00:06:33,340 --> 00:06:36,340
+Y una vez que los encuentra, envía paquetes de información
+
+120
+00:06:36,660 --> 00:06:37,660
+a la corteza prefrontal.
+
+121
+00:06:37,660 --> 00:06:41,320
+Pero cuanto más externalizamos nuestra memoria a Google,
+
+122
+00:06:41,520 --> 00:06:43,540
+menos información hay almacenada en la biblioteca.
+
+123
+00:06:43,900 --> 00:06:46,760
+Y menos puede el hipocampo proporcionar materia prima
+
+124
+00:06:46,840 --> 00:06:49,420
+a nuestra corteza prefrontal para pensar.
+
+125
+00:06:49,820 --> 00:06:52,420
+En pocas palabras, saber cosas sigue siendo importante.
+
+126
+00:06:53,480 --> 00:06:57,860
+Si admitimos que la IA también se usa como cerebro auxiliar
+
+127
+00:06:58,160 --> 00:07:00,460
+por estudiantes universitarios, de secundaria e incluso de primaria,
+
+128
+00:07:01,420 --> 00:07:04,480
+ya tenemos la intuición de que su cerebro está sufriendo
+
+129
+00:07:04,480 --> 00:07:05,980
+una especie de efecto Google.
+
+130
+00:07:06,400 --> 00:07:07,540
+Pero multiplicado por 1000.
+
+131
+00:07:16,540 --> 00:07:20,060
+Para los desarrolladores que me escuchan, se parece al concepto de deuda técnica.
+
+132
+00:07:20,100 --> 00:07:23,820
+Ese desagradable hábito de resolver un problema inmediato
+
+133
+00:07:23,860 --> 00:07:28,020
+con un método que va a desencadenar una avalanche de problemas después.
+
+134
+00:07:28,060 --> 00:07:32,300
+En cualquier caso, este estudio parece confirmar nuestras intuiciones más sombrías.
+
+135
+00:07:32,340 --> 00:07:35,300
+Las ganancias aparentes en el rendimiento de la IA
+
+136
+00:07:35,340 --> 00:07:38,140
+ocultan potencialmente enormes lagunas.
+
+137
+00:07:38,180 --> 00:07:41,060
+Y todos vamos a volvernos idiotas.
+
+138
+00:07:41,100 --> 00:07:42,380
+A menos que haya un aspecto de la IA
+
+139
+00:07:42,420 --> 00:07:43,180
+que aún no hayamos explorado.
+
+140
+00:07:43,300 --> 00:07:48,860
+Un aspecto de la IA que aún no hayamos explorado.
+
+141
+00:07:48,900 --> 00:07:53,660
+Porque los estudiantes de secundaria, universitarios o desarrolladores junior tienen algo en común.
+
+142
+00:07:53,700 --> 00:07:58,340
+Y es que no tuvieron la oportunidad de terminar su aprendizaje sin la IA.
+
+143
+00:07:58,380 --> 00:08:03,060
+Entonces, ¿qué pasaría si confiáramos esta herramienta a una persona experimentada?
+
+144
+00:08:03,100 --> 00:08:05,540
+Aquí también encontré, o más bien,
+
+145
+00:08:05,580 --> 00:08:08,700
+Perplexity encontró una encuesta muy curiosa.
+
+146
+00:08:08,740 --> 00:08:13,260
+791 desarrolladores fueron interrogados sobre su manera de usar la IA.
+
+147
+00:08:13,300 --> 00:08:17,020
+Por un lado, principiantes con menos de dos años de experiencia y, por otro,
+
+148
+00:08:17,060 --> 00:08:20,260
+seniors con más de diez años de práctica a sus espaldas.
+
+149
+00:08:20,300 --> 00:08:24,580
+Y lo que revela esta encuesta es completamente contraintuitivo.
+
+150
+00:08:24,620 --> 00:08:30,180
+Son los seniors quienes más utilizan el código generado por la IA en sus proyectos.
+
+151
+00:08:30,220 --> 00:08:34,900
+Sin embargo, pasan mucho más tiempo que los juniors verificando en detalle
+
+152
+00:08:34,940 --> 00:08:37,700
+el código generado por los asistentes. Lo inspeccionan,
+
+153
+00:08:37,740 --> 00:08:40,900
+lo depuran y así se lo reapropian.
+
+154
+00:08:40,940 --> 00:08:43,100
+En realidad, los juniors dependen de la IA
+
+155
+00:08:43,100 --> 00:08:46,740
+como de una muleta, mientras que los seniors utilizan la IA
+
+156
+00:08:46,780 --> 00:08:50,100
+como un equipo de juniors a su servicio.
+
+157
+00:08:50,140 --> 00:08:53,380
+¿Ven el matiz, por ejemplo con Antoine?
+
+158
+00:08:53,420 --> 00:08:56,380
+Un poco antes, les conté cómo daba directrices a su
+
+159
+00:08:56,420 --> 00:09:01,180
+asistente a la manera de un director de orquesta que dirige a sus músicos con la batuta.
+
+160
+00:09:01,220 --> 00:09:05,380
+Salvo que el desarrollo no es como la dirección de orquesta.
+
+161
+00:09:05,420 --> 00:09:08,100
+Se parece más a la cocina.
+
+162
+00:09:08,140 --> 00:09:12,300
+En un gran restaurante, el chef estrellado siempre está rodeado de un equipo de cocineros
+
+163
+00:09:12,300 --> 00:09:15,900
+muy jerarquizado que se llama una brigada.
+
+164
+00:09:15,940 --> 00:09:20,300
+En la parte más baja de la jerarquía está el ayudante de cocina que, en realidad, no cocina.
+
+165
+00:09:20,340 --> 00:09:23,620
+Pela patatas o limpia la encimera.
+
+166
+00:09:23,660 --> 00:09:28,300
+Por encima está el chef de partida que se parece un poco más a la idea que tenemos de cocinar.
+
+167
+00:09:28,340 --> 00:09:30,180
+Domina la cocción de los alimentos,
+
+168
+00:09:30,220 --> 00:09:33,860
+emplata los platos y dirige a sus ayudantes con mano de hierro.
+
+169
+00:09:33,900 --> 00:09:38,500
+Pero está especializado, por ejemplo, en las salsas o las carnes.
+
+170
+00:09:38,540 --> 00:09:41,300
+Luego viene el subchef o segundo de cocina.
+
+171
+00:09:41,300 --> 00:09:43,340
+Es el brazo derecho del chef estrellado.
+
+172
+00:09:43,380 --> 00:09:44,860
+Corrige los condimentos.
+
+173
+00:09:44,900 --> 00:09:49,180
+Coordina a los diferentes chefs de partida y se ocupa de la gestión de los almacenes.
+
+174
+00:09:49,220 --> 00:09:51,500
+En este contexto muy codificado,
+
+175
+00:09:51,540 --> 00:09:58,300
+cualquier cocinero que aspire a convertirse en un gran chef estrellado debe comenzar su carrera en la parte baja de la escala.
+
+176
+00:09:58,340 --> 00:10:02,700
+Primero como ayudante, luego como chef de partida, y así sucesivamente.
+
+177
+00:10:02,740 --> 00:10:07,220
+Las herramientas de desarrollo con IA como Cursor, Copilot y otros Clavos de código.
+
+178
+00:10:07,260 --> 00:10:10,420
+Son un poco como los ayudantes y los chefs de partida.
+
+179
+00:10:10,420 --> 00:10:14,340
+Tienen verdaderas competencias, pero cuanto más compleja es la tarea,
+
+180
+00:10:14,380 --> 00:10:17,020
+más se necesita a alguien para supervisarlos.
+
+181
+00:10:17,060 --> 00:10:20,580
+Podemos decir que programar una página web es como pelar patatas.
+
+182
+00:10:20,620 --> 00:10:25,180
+Producir un sitio de e-commerce de pocas páginas con un carrito y un botón de compra,
+
+183
+00:10:25,220 --> 00:10:28,900
+es como preparar una carne en el punto justo con la salsita que le va bien.
+
+184
+00:10:28,940 --> 00:10:33,220
+Y desarrollar una aplicación que debe gestionar millones de usuarios simultáneamente,
+
+185
+00:10:33,260 --> 00:10:38,020
+equivale a dirigir una brigada de 90 personas durante el servicio.
+
+186
+00:10:38,060 --> 00:10:40,300
+Y eso, por ahora, la IA está muy lejos de lograrlo.
+
+187
+00:10:40,420 --> 00:10:41,420
+Y qué bien está.
+
+188
+00:10:41,460 --> 00:10:44,900
+Pero cuando Antoine tuvo que desarrollar la herramienta web que le había encargado,
+
+189
+00:10:44,940 --> 00:10:48,940
+se encontró dirigiendo una brigada de cocineros de IA
+
+190
+00:10:48,980 --> 00:10:52,020
+sin haber pasado previamente por todos los rangos.
+
+191
+00:10:52,060 --> 00:10:55,460
+Mientras que un desarrollador senior es como el chef estrellado.
+
+192
+00:10:55,500 --> 00:10:58,060
+Ha pasado por todos los puestos de la brigada.
+
+193
+00:10:58,100 --> 00:11:00,220
+Y si le ponen una pistola en la sien,
+
+194
+00:11:00,260 --> 00:11:04,620
+puede picar cebollas a toda velocidad, es decir, escribir código a chorro.
+
+195
+00:11:04,660 --> 00:11:09,380
+Y si la IA le entrega un código catastrófico, lo ve, lo corrige.
+
+196
+00:11:09,420 --> 00:11:10,180
+Exacto.
+
+197
+00:11:10,420 --> 00:11:14,500
+Es esa polivalencia y esa visión a gran escala lo que les falta a los juniors,
+
+198
+00:11:14,540 --> 00:11:18,820
+pero que permite a los seniors soltarse con el código generado por la IA.
+
+199
+00:11:18,860 --> 00:11:20,580
+Los devs seniors, al fin y al cabo,
+
+200
+00:11:20,620 --> 00:11:26,820
+han respetado el ciclo de aprendizaje teoría-práctica-metacognición.
+
+201
+00:11:26,860 --> 00:11:30,060
+Es porque sus conocimientos están profundamente arraigados
+
+202
+00:11:30,100 --> 00:11:34,900
+que la IA multiplica sus competencias en lugar de atrofiarlas.
+
+203
+00:11:43,900 --> 00:11:47,180
+Y sobre todo, la verdadera razón no es técnica, sino social.
+
+204
+00:11:47,220 --> 00:11:49,740
+A diferencia de tu mentor o tu profesor,
+
+205
+00:11:49,780 --> 00:11:53,300
+nunca te sentirás en deuda ante ella.
+
+206
+00:11:53,340 --> 00:11:57,100
+Eso crea una paradoja catastrófica porque, sobre el papel,
+
+207
+00:11:57,140 --> 00:12:00,460
+los LLM son herramientas perfectamente igualitarias.
+
+208
+00:12:00,500 --> 00:12:04,540
+Ya seas el nieto de Bernard Arnault o la hija de un inmigrante ucraniano
+
+209
+00:12:04,580 --> 00:12:06,140
+que acaba de llegar a Francia,
+
+210
+00:12:06,140 --> 00:12:10,180
+si tienes un smartphone, tienes acceso a una IA.
+
+211
+00:12:10,220 --> 00:12:12,740
+Excepto que siempre tendrás dos caminos.
+
+212
+00:12:12,780 --> 00:12:16,380
+El de la muleta que lleva hacia la lobotomía del cerebro
+
+213
+00:12:16,420 --> 00:12:21,620
+y el del tutor que, cada día, te hará un poco mejor.
+
+214
+00:12:21,660 --> 00:12:24,820
+El futuro corre el riesgo de ser extremadamente desigual.
+
+215
+00:12:24,860 --> 00:12:28,140
+Por un lado, los que conocen el impacto de la IA en el cerebro
+
+216
+00:12:28,180 --> 00:12:31,460
+y toman la decisión de sacrificar la eficiencia
+
+217
+00:12:31,500 --> 00:12:34,540
+para privilegiar su propio aprendizaje.
+
+218
+00:12:34,580 --> 00:12:35,500
+Y por el otro,
+
+219
+00:12:35,500 --> 00:12:38,980
+los que ceden al canto de sirena de la gratificación inmediata,
+
+220
+00:12:39,020 --> 00:12:43,580
+pero acumulan lagunas hasta quedar completamente lobotomizados.
+
+221
+00:12:43,620 --> 00:12:45,660
+Y eso vale también para las empresas, por cierto,
+
+222
+00:12:45,700 --> 00:12:48,580
+las que van a privilegiar el rendimiento inmediato
+
+223
+00:12:48,620 --> 00:12:51,100
+en detrimento del cerebro de sus empleados
+
+224
+00:12:51,140 --> 00:12:54,060
+y las que tendrán una visión a largo plazo.
+
+225
+00:12:54,100 --> 00:12:56,540
+Es tentador pensar que formaremos parte de los elegidos.
+
+226
+00:12:56,580 --> 00:13:00,060
+Pero el problema es que muy pocos tenemos voluntad.
+
+227
+00:13:00,100 --> 00:13:03,060
+Basta con comparar el número de personas que toman el ascensor
+
+228
+00:13:03,100 --> 00:13:05,340
+con los que se obligan a subir las escaleras.
+
+229
+00:13:05,500 --> 00:13:08,260
+El Team Escaleras es bastante minoritario.
+
+230
+00:13:08,300 --> 00:13:12,260
+Y es normal, porque la pereza no es un bug,
+
+231
+00:13:12,300 --> 00:13:13,860
+es una funcionalidad.
+
+232
+00:13:13,900 --> 00:13:16,140
+Cientos de miles de años de evolución
+
+233
+00:13:16,180 --> 00:13:18,500
+han optimizado nuestro cerebro para que sea económico.
+
+234
+00:13:18,540 --> 00:13:20,660
+Por eso toma atajos siempre que puede.
+
+235
+00:13:20,700 --> 00:13:24,940
+Porque pensar consume oxígeno y glucosa.
+
+236
+00:13:24,980 --> 00:13:26,460
+El problema es que con la IA,
+
+237
+00:13:26,500 --> 00:13:30,220
+esa pereza puede tomar una curva vertiginosa.
+
+238
+00:13:30,260 --> 00:13:32,700
+Ya no hablamos de almacenar información en páginas de Wikipedia,
+
+239
+00:13:32,740 --> 00:13:35,340
+de cambiar nuestro sentido de la orientación por un GPS,
+
+240
+00:13:35,340 --> 00:13:37,620
+o delegar cálculos a archivos de Excel.
+
+241
+00:13:37,660 --> 00:13:42,540
+Ahora podemos externalizar el más mínimo proceso mental exigente.
+
+242
+00:13:42,580 --> 00:13:46,260
+Porque es nuestra naturaleza profunda buscar la facilidad.
+
+243
+00:13:46,300 --> 00:13:50,500
+Entonces, si hay que luchar contra nuestra tendencia ancestral a la pereza,
+
+244
+00:13:50,540 --> 00:13:55,020
+quizás haya que buscar la solución en viejas recetas de toda la vida.
+
+245
+00:13:55,060 --> 00:14:00,260
+En la escuela, ya disponemos de un sistema para obligar a los aprendices a hacer esfuerzos.
+
+246
+00:14:00,300 --> 00:14:03,020
+Se llama "exámenes presenciales".
+
+247
+00:14:03,060 --> 00:14:05,020
+Atención, los deberes a la antigua,
+
+248
+00:14:05,020 --> 00:14:07,100
+solo con papel y bolígrafo.
+
+249
+00:14:07,140 --> 00:14:09,020
+Y un ejemplo de su utilidad
+
+250
+00:14:09,060 --> 00:14:13,020
+es lo que ocurrió con el examen de admisión a medicina belga de 2025.
+
+251
+00:14:13,060 --> 00:14:17,180
+En la Bélgica flamenca, se realizó por primera vez en ordenador.
+
+252
+00:14:17,220 --> 00:14:25,780
+La tasa de aprobados pasó extrañamente del 19% en 2024 al 47%.
+
+253
+00:14:25,820 --> 00:14:29,580
+Potencialmente, miles de aspirantes a médico que hicieron trampa.
+
+254
+00:14:29,620 --> 00:14:31,740
+Pero en Valonia no tuvieron ese problema,
+
+255
+00:14:31,780 --> 00:14:34,140
+porque el examen se hace a la antigua,
+
+256
+00:14:34,140 --> 00:14:35,820
+sin soporte digital.
+
+257
+00:14:35,860 --> 00:14:38,540
+Entonces, a riesgo de parecer un boomer,
+
+258
+00:14:38,580 --> 00:14:42,140
+estoy convencido de que los exámenes con papel y lápiz
+
+259
+00:14:42,180 --> 00:14:44,100
+son en realidad una solución de futuro.
+
+260
+00:14:44,140 --> 00:14:46,700
+Es pura manipulación psicológica.
+
+261
+00:14:46,740 --> 00:14:48,220
+Después de un día de clases,
+
+262
+00:14:48,260 --> 00:14:50,660
+no tienes ninguna motivación para hacer los ejercicios.
+
+263
+00:14:50,700 --> 00:14:56,060
+Pero si te digo que tienes un examen vigilado sin asistencia en tres días,
+
+264
+00:14:56,100 --> 00:15:03,020
+ese futuro potencialmente desagradable donde sacas un cero te da instantáneamente la motivación necesaria.
+
+265
+00:15:03,060 --> 00:15:03,980
+Al menos en mí,
+
+266
+00:15:03,980 --> 00:15:05,700
+es lo que funcionará.
+
+267
+00:15:05,740 --> 00:15:09,700
+De hecho, probé una versión radical de esta solución con Antoine.
+
+268
+00:15:09,740 --> 00:15:14,300
+Durante tres meses, le prohibí usar cualquier LLM.
+
+269
+00:15:14,340 --> 00:15:21,820
+Una auténtica cura de desintoxicación que hizo caer su productividad de manera extremadamente frustrante.
+
+270
+00:15:21,860 --> 00:15:25,740
+Al principio, resoplas un poco por la nariz porque perder entre comillas dos, tres semanas,
+
+271
+00:15:25,780 --> 00:15:27,060
+no es muy satisfactorio.
+
+272
+00:15:27,100 --> 00:15:29,700
+Sobre todo porque los resultados, para mí, son súper importantes.
+
+273
+00:15:29,740 --> 00:15:31,180
+Soy orientado a resultados.
+
+274
+00:15:31,220 --> 00:15:33,540
+Si retomamos nuestros tres pilares del aprendizaje,
+
+275
+00:15:33,540 --> 00:15:37,540
+Antoine tuvo que leer la documentación antes de empezar a programar.
+
+276
+00:15:37,580 --> 00:15:43,460
+Es decir, tragarse toda la teoría que la IA le había permitido evitar hasta entonces.
+
+277
+00:15:43,500 --> 00:15:49,260
+Luego, tuvo que programar él mismo, es decir, enfrentarse a la práctica en lugar de externalizarla a la IA.
+
+278
+00:15:49,300 --> 00:15:54,420
+Un verdadero ejercicio de rememoración que le permitió asentar sus conocimientos.
+
+279
+00:15:54,460 --> 00:15:56,260
+Y la guinda del pastel.
+
+280
+00:15:56,300 --> 00:16:01,420
+Cada vez que estaba bloqueado, tuvo que volver a la documentación y buscar los bugs línea por línea.
+
+281
+00:16:01,460 --> 00:16:03,380
+Lo cual es un verdadero ejercicio de rememoración.
+
+282
+00:16:03,380 --> 00:16:09,340
+Un ejercicio de metacognición donde cada hipótesis hacía activarse sus neuronas dopaminérgicas.
+
+283
+00:16:09,380 --> 00:16:13,100
+Después de esos tres meses, reintrodujimos la IA poco a poco.
+
+284
+00:16:13,140 --> 00:16:19,820
+Y no solo Antoine había mejorado en competencias, sino que además había recuperado el placer de programar.
+
+285
+00:16:19,860 --> 00:16:25,140
+Cuando empiezas a incorporar IA un poco en tu código, a hacerle escribir una parte del proyecto,
+
+286
+00:16:25,180 --> 00:16:32,020
+cuando llegas a casa por la noche, ya no tienes esa sensación de que programé tal parte del sitio,
+
+287
+00:16:32,060 --> 00:16:33,340
+programé tal funcionalidad.
+
+288
+00:16:33,420 --> 00:16:39,220
+Creé esto, porque ya no sabes en qué medida lo creaste tú y en qué medida lo creó la IA.
+
+289
+00:16:39,260 --> 00:16:42,660
+No sabes qué parte todavía te pertenece.
+
+290
+00:16:42,700 --> 00:16:49,340
+En el límite, solo has gestionado una IA orientándola de vez en cuando.
+
+291
+00:16:49,380 --> 00:16:52,060
+Y al final, ¿qué es lo que todavía te pertenece en el proyecto?
+
+292
+00:16:52,100 --> 00:16:54,340
+Te has vuelto dependiente de la herramienta.
+
+293
+00:16:54,380 --> 00:16:57,700
+Hay esa cosa de cuando eres tú quien lo ha hecho.
+
+294
+00:16:57,740 --> 00:17:03,100
+Sientes un enorme placer al finalmente ensamblar las piezas del puzzle, que tu sistema funcione
+
+295
+00:17:03,100 --> 00:17:08,940
+perfectamente como lo habías pensado y estás súper orgulloso de haberlo creado tú.
+
+296
+00:17:08,980 --> 00:17:13,700
+Y lo único que te apetece es seguir trabajando en ello.
+
+297
+00:17:16,140 --> 00:17:19,940
+Entonces sí, esta historia de cura de desintox con Antoine puede parecer
+
+298
+00:17:19,980 --> 00:17:24,340
+extrema, pero en realidad ilustra algo más profundo.
+
+299
+00:17:24,380 --> 00:17:29,660
+Durante milenios, la humanidad ha progresado enfrentándose a la dificultad.
+
+300
+00:17:29,700 --> 00:17:32,960
+Es el esfuerzo el que esculpe el cerebro, no el resultado.
+
+301
+00:17:32,960 --> 00:17:37,400
+Y ahora, por primera vez en nuestra historia, tenemos una herramienta capaz de eliminar
+
+302
+00:17:37,440 --> 00:17:42,600
+casi toda fricción cognitiva. Podríamos haberles hablado de otras amenazas.
+
+303
+00:17:42,640 --> 00:17:46,960
+La huella de carbono de los centros de datos, el pillaje de la propiedad intelectual,
+
+304
+00:17:47,000 --> 00:17:50,600
+la soberanía digital o los empleos que desaparecen.
+
+305
+00:17:50,640 --> 00:17:53,120
+Todo eso es real, pero hemos elegido
+
+306
+00:17:53,160 --> 00:17:58,000
+centrarnos en el cerebro porque el cerebro es la clave.
+
+307
+00:17:58,040 --> 00:18:01,480
+Una sociedad que ya no sabe formar a sus hijos para pensar.
+
+308
+00:18:01,520 --> 00:18:02,840
+Puede tener todas las leyes,
+
+309
+00:18:02,840 --> 00:18:07,760
+todas las patentes y todos los molinos de viento del mundo, se derrumba igualmente.
+
+310
+00:18:07,800 --> 00:18:12,080
+La educación no es un sector más, es el cimiento.
+
+311
+00:18:12,120 --> 00:18:16,440
+Es ahí donde forjamos a quienes van a heredar todo lo demás.
+
+312
+00:18:16,480 --> 00:18:19,720
+Así que no, la IA no nos va a hacer estúpidos.
+
+313
+00:18:19,760 --> 00:18:25,360
+Nos volveremos estúpidos solos si elegimos sistemáticamente el camino más corto.
+
+314
+00:18:25,400 --> 00:18:27,800
+La buena noticia es que es una elección.
+
+315
+00:18:27,840 --> 00:18:32,360
+Y como todas las elecciones, se hace cada día, con cada prompt.
+
+316
+00:18:32,360 --> 00:18:36,800
+Usa la IA como una muleta o como un entrenador.
+
+317
+00:18:36,840 --> 00:18:40,200
+Delega tu pensamiento o afílalo.
+
+318
+00:18:40,240 --> 00:18:44,680
+En el fondo, la pregunta nunca ha sido si ChatGPT era inteligente.
+
+319
+00:18:44,720 --> 00:18:47,520
+Es saber si nosotros aún queremos seguir siéndolo.
+
