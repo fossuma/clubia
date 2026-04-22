@@ -1,0 +1,137 @@
+\documentclass[a4paper]{article}
+
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{mdframed}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{calc}
+\usepackage{anyfontsize}
+
+\pagecolor{white}
+\color{black}
+
+\pagestyle{empty}
+
+% Custom thick rule
+\newcommand{\thickrule}{\noindent\rule{\linewidth}{2.5pt}}
+\newcommand{\thinrule}{\noindent\rule{\linewidth}{0.6pt}}
+
+\begin{document}
+
+\begin{center}
+
+%% ── TOP RULE ──────────────────────────────────────────────────────────────
+\thickrule
+\vspace{2pt}
+\thinrule
+
+\vspace{10pt}
+
+%% ── LOGO + CLUB NAME ──────────────────────────────────────────────────────
+\begin{minipage}[c]{0.22\textwidth}
+  \centering
+  \includegraphics[width=3.5cm]{../../images/logo/ClubIA_logo_solo_monocromo.png}
+\end{minipage}%
+\hspace{0.04\textwidth}%
+\begin{minipage}[c]{0.70\textwidth}
+  {\fontsize{30}{42}\selectfont\bfseries ClubIA}\\[4pt]
+  {\fontsize{20}{17}\selectfont\scshape ETSI Inform\'atica}\\[6pt]
+  {\fontsize{18}{14}\selectfont\itshape
+    Estudiantes de inform\'atica que quieren entender\\
+    c\'omo la IA est\'a transformando el sector}
+\end{minipage}
+
+\vspace{10pt}
+\thinrule
+\vspace{2pt}
+\thickrule
+
+\vspace{36pt}
+
+%% ── PRIMERA SESIÓN badge ───────────────────────────────────────────────────
+\fbox{%
+  \parbox{0.55\textwidth}{%
+    \centering\vspace{6pt}
+    {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
+    \vspace{6pt}
+  }%
+}
+
+\vspace{48pt}
+
+%% ── TOPIC ─────────────────────────────────────────────────────────────────
+{\fontsize{56}{62}\selectfont\bfseries
+  Dependencia cognitiva de la IA}
+
+\vspace{28pt}
+{\fontsize{30}{24}\selectfont
+  \textit{¿Vamos a dejar de pensar?}}
+
+\vspace{48pt}
+\thinrule
+\vspace{14pt}
+
+%% ── SESSION DATA ──────────────────────────────────────────────────────────
+\begin{tabular}{ccc}
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{22}{26}\selectfont\bfseries 23 de abril}
+  \end{minipage}
+  &
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{22}{26}\selectfont\bfseries 19:30\,h}
+  \end{minipage}
+  &
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{17}{21}\selectfont\bfseries Sala de}\\
+    {\fontsize{17}{21}\selectfont\bfseries Reuniones B}
+  \end{minipage}
+\end{tabular}
+
+\vspace{14pt}
+\thinrule
+\vspace{30pt}
+
+%% ── STRUCTURE ─────────────────────────────────────────────────────────────
+{\fontsize{15}{13}\selectfont\scshape Estructura de la sesi\'on}
+
+\vspace{10pt}
+
+{\fontsize{15}{10}\selectfont
+\begin{tabular}{>{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}}
+  \midrule[1.2pt]
+  \rule{0pt}{14pt}%
+  {\bfseries 01} & {\bfseries 02} & {\bfseries 03} & {\bfseries 04}\\[3pt]
+  V\'{\i}deo &
+  Art\'{\i}culos &
+  Debate &
+  Conclusiones\\[6pt]
+  \midrule[1.2pt]
+\end{tabular}
+}
+
+\vspace{6pt}
+{\fontsize{15}{12}\selectfont
+  \textit{No necesitas conocimientos previos~---~solo ganas de aprender.}}
+
+\vspace{60pt}
+
+%% ── FOOTER ────────────────────────────────────────────────────────────────
+{\fontsize{15}{11}\selectfont
+  Entrada libre y gratuita · Abierto a toda la comunidad universitaria\\[2pt]
+  \textbf{ClubIA} · ETSI Inform\'atica · Universidad de M\'alaga}
+
+\end{center}
+
+\end{document}
