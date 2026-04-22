@@ -1,10 +1,11 @@
+% compilar con lualatex poster.tex
+
 \documentclass[a4paper]{article}
 
 \usepackage[a4paper, margin=1.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{microtype}
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{mdframed}
@@ -15,6 +16,8 @@
 \usepackage{enumitem}
 \usepackage{calc}
 \usepackage{anyfontsize}
+\usepackage{emoji}
+\setmainfont{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}]
 
 \pagecolor{white}
 \color{black}
@@ -39,13 +42,13 @@
 %% ── LOGO + CLUB NAME ──────────────────────────────────────────────────────
 \begin{minipage}[c]{0.22\textwidth}
   \centering
-  \includegraphics[width=3.5cm]{../../images/logo/ClubIA_logo_solo_monocromo.png}
+  \includegraphics[width=3.5cm]{../../images/logo/ClubIA_logo_solo.png}
 \end{minipage}%
 \hspace{0.04\textwidth}%
 \begin{minipage}[c]{0.70\textwidth}
   {\fontsize{30}{42}\selectfont\bfseries ClubIA}\\[4pt]
   {\fontsize{20}{17}\selectfont\scshape ETSI Inform\'atica}\\[6pt]
-  {\fontsize{18}{14}\selectfont\itshape
+  {\fontsize{16}{14}\selectfont\itshape
     Estudiantes de inform\'atica que quieren entender\\
     c\'omo la IA est\'a transformando el sector}
 \end{minipage}
@@ -55,7 +58,7 @@
 \vspace{2pt}
 \thickrule
 
-\vspace{36pt}
+\vspace{25pt}
 
 %% ── PRIMERA SESIÓN badge ───────────────────────────────────────────────────
 \fbox{%
@@ -69,12 +72,12 @@
 \vspace{40pt}
 
 %% ── TOPIC ─────────────────────────────────────────────────────────────────
-{\fontsize{56}{62}\selectfont\bfseries
+{\color[RGB]{20,60,120}\fontsize{56}{62}\selectfont\bfseries
   Dependencia cognitiva de la IA}
 
 \vspace{28pt}
-{\fontsize{30}{24}\selectfont
-  \textit{¿Vamos a dejar de pensar?}}
+{\color[RGB]{80,120,180}\fontsize{30}{24}\selectfont
+  \textit{¿Vamos a dejar de pensar?}} {\fontsize{24}{28}\selectfont\emoji{zany-face}}
 
 \vspace{30pt}
 \thinrule
@@ -126,8 +129,9 @@
   \textit{No necesitas conocimientos previos~---~solo ganas de aprender.}}
 
 \vspace{10pt}
-\includegraphics[width=3cm]{../../images/qr.png}
-\vspace{15pt}
+\includegraphics[width=3cm]{../../images/qr.png}\\[1pt]
+{\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
+\vspace{18pt}
 
 %% ── FOOTER ────────────────────────────────────────────────────────────────
 {\fontsize{15}{11}\selectfont
