@@ -281,6 +281,73 @@
       background: #ffffff;
     }
 
+    .poster-open {
+      border: 0;
+      padding: 0;
+      background: transparent;
+      cursor: zoom-in;
+      width: 100%;
+    }
+
+    .poster-open img {
+      width: 100%;
+    }
+
+    .poster-stack {
+      width: min(190px, 100%);
+      display: grid;
+      gap: 0.55rem;
+      justify-items: center;
+    }
+
+    .poster-jump {
+      width: fit-content;
+      font-size: 0.85rem;
+      padding: 0.45rem 0.85rem;
+    }
+
+    .poster-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      background: rgba(8, 22, 28, 0.24);
+      -webkit-backdrop-filter: blur(9px);
+      backdrop-filter: blur(9px);
+    }
+
+    .poster-lightbox[hidden] {
+      display: none;
+    }
+
+    .poster-lightbox img {
+      width: auto;
+      max-width: min(1100px, 96vw);
+      max-height: 92vh;
+      display: block;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3);
+    }
+
+    .poster-lightbox-close {
+      position: absolute;
+      top: 0.9rem;
+      right: 0.9rem;
+      width: 2.2rem;
+      height: 2.2rem;
+      border: 1px solid rgba(220, 235, 230, 0.75);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: #0f3138;
+      font-size: 1.35rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
     .poster-content {
       display: grid;
       gap: 0.55rem;
@@ -540,15 +607,14 @@
 
       <div class="poster-grid" aria-label="Carteles de reuniones">
         <article class="poster-card">
-          <img src="images/logo1debate.png" alt="Logo del primer debate del club" />
-          <div class="poster-content">
-            <a class="poster-badge poster-badge-link" href="#sesion-2">Sesion anunciada</a>
-            <h3>Dependencia cognitiva de la IA y su implicacion en el aprendizaje</h3>
-            <ul class="poster-meta">
-              <li><strong>Fecha:</strong> 23/04/2026</li>
-              <li><strong>Hora:</strong> 19:30</li>
-              <li><strong>Lugar:</strong> Sala de reuniones B</li>
-            </ul>
+          <div class="poster-stack">
+            <button class="poster-open" type="button" aria-label="Ampliar cartel de la sesion 2" data-poster-open>
+              <img
+                src="stuff/poster/poster_image.jpg"
+                alt="Poster de la sesion sobre dependencia cognitiva"
+              />
+            </button>
+            <a class="btn btn-primary poster-jump" href="#sesion-2">Saber más</a>
           </div>
         </article>
       </div>
@@ -603,7 +669,7 @@
         <section id="sesion-2" class="section-card" aria-labelledby="sesion-2-title">
           <div class="section-title">
             <span class="kicker">Sesion 2</span>
-            <h2 id="sesion-2-title">Dependencia cognitiva</h2>
+            <h2 id="sesion-2-title">Dependencia cognitiva - 23/04/2026</h2>
           </div>
           <p class="section-desc">
             A partir de estudios y material audiovisual, debatiremos sobre las posibles consecuencias del uso de la IA en programación.
@@ -631,5 +697,42 @@
       Club de la IA · Documentacion viva de sesiones, debates y proyectos.
     </footer>
   </div>
+
+  <div class="poster-lightbox" hidden data-poster-lightbox aria-modal="true" role="dialog" aria-label="Cartel ampliado de la sesion 2">
+    <button class="poster-lightbox-close" type="button" aria-label="Cerrar cartel ampliado" data-poster-close>&times;</button>
+    <img src="stuff/poster/poster_image.jpg" alt="Poster completo de la sesion sobre dependencia cognitiva" />
+  </div>
+
+  <script>
+    const posterOpen = document.querySelector("[data-poster-open]");
+    const posterLightbox = document.querySelector("[data-poster-lightbox]");
+    const posterClose = document.querySelector("[data-poster-close]");
+
+    if (posterOpen && posterLightbox && posterClose) {
+      const closePoster = () => {
+        posterLightbox.hidden = true;
+        document.body.style.overflow = "";
+      };
+
+      posterOpen.addEventListener("click", () => {
+        posterLightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+      });
+
+      posterClose.addEventListener("click", closePoster);
+
+      posterLightbox.addEventListener("click", (event) => {
+        if (event.target === posterLightbox) {
+          closePoster();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !posterLightbox.hidden) {
+          closePoster();
+        }
+      });
+    }
+  </script>
 </body>
 </html>
