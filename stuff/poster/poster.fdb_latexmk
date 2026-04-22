@@ -1,8 +1,9 @@
 # Fdb version 4
-["pdflatex"] 1776836335.97963 "/home/vico/opt/clubia/stuff/poster/poster.tex" "poster.pdf" "poster" 1776836337.26837 0
+["pdflatex"] 1776837142.17935 "/home/vico/opt/clubia/stuff/poster/poster.tex" "poster.pdf" "poster" 1776837143.70782 0
   "../../images/logo/ClubIA_logo_solo_monocromo.png" 1776833081.3723 43962 9c4ef6f55270b6e8962fc4a2bf74922b ""
+  "../../images/qr.png" 1776836915.64246 404 a458cf75d68216947dfeae2e7deff417 ""
   "/etc/texmf/web2c/texmf.cnf" 1739560637.60903 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/vico/opt/clubia/stuff/poster/poster.tex" 1776836335.66408 4401 f2073f45309bfa1b34990f0b0ba32119 ""
+  "/home/vico/opt/clubia/stuff/poster/poster.tex" 1776837141.89071 4463 72eaee0c8d1d48671193a99b16ce94ce ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1440.tfm" 1136768653 1536 3290a75021d32d016616fe527bc9884c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -137,8 +138,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1775076859.58358 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1739560800 8212235 3c793b9b2ef693c65bcc8773d9837bb4 ""
-  "poster.aux" 1776836337.15813 67 d1f1d04f1f825549314e4f02ae5806bb "pdflatex"
-  "poster.tex" 1776836335.66408 4401 f2073f45309bfa1b34990f0b0ba32119 ""
+  "poster.aux" 1776837143.6348 67 d1f1d04f1f825549314e4f02ae5806bb "pdflatex"
+  "poster.tex" 1776837141.89071 4463 72eaee0c8d1d48671193a99b16ce94ce ""
   (generated)
   "poster.aux"
   "poster.log"
