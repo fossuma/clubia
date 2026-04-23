@@ -524,63 +524,6 @@
       font-size: 0.95rem;
     }
 
-    .session-media {
-      margin-top: 0.45rem;
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .video-shell {
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .session-media video {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      border: 1px solid #cddfd7;
-      background: #000;
-      box-shadow: 0 10px 24px rgba(16, 39, 47, 0.16);
-    }
-
-    .session-captions {
-      position: absolute;
-      left: 50%;
-      bottom: clamp(3.2rem, 5.8vw, 4.6rem);
-      transform: translateX(-50%);
-      width: min(92%, 760px);
-      padding: 0.48rem 0.68rem;
-      border-radius: 10px;
-      background: rgba(0, 0, 0, 0.76);
-      color: #ffffff;
-      font-size: 0.98rem;
-      font-weight: 700;
-      line-height: 1.35;
-      text-align: center;
-      white-space: pre-line;
-      pointer-events: none;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.62);
-      z-index: 2;
-    }
-
-    .session-captions[hidden] {
-      display: none;
-    }
-
-    .session-media p {
-      color: #4f686f;
-      font-size: 0.9rem;
-    }
-
-    .session-media a {
-      color: #0c636b;
-      font-weight: 700;
-      text-underline-offset: 0.14em;
-    }
-
     .resource {
       display: grid;
       gap: 0.85rem;
@@ -775,22 +718,7 @@
           <p class="section-desc">
             A partir de estudios y material audiovisual, debatiremos sobre las posibles consecuencias del uso de la IA en programación.
           </p>
-          <div class="session-media" aria-label="Video de la sesión sobre dependencia cognitiva">
-            <div class="video-shell">
-              <video controls preload="metadata">
-                <source src="sesiones/20260423_dependencia_ia/video.mp4" type="video/mp4" />
-                <track
-                  kind="subtitles"
-                  src="sesiones/20260423_dependencia_ia/video.vtt"
-                  srclang="es"
-                  label="Español"
-                  default
-                />
-                Tu navegador no soporta la reproducción de video HTML5.
-              </video>
-              <div class="session-captions" data-session-captions hidden></div>
-            </div>
-          </div>
+          <p class="section-desc">El video de esta sesión se ha retirado temporalmente.</p>
         </section>
 
         <section id="sesion-3" class="section-card" aria-labelledby="sesion-3-title">
@@ -852,13 +780,10 @@
     <img src="stuff/poster/poster_image.jpg" alt="Póster completo de la sesión sobre dependencia cognitiva" />
   </div>
 
-  <script src="sesiones/20260423_dependencia_ia/video.captions.js?v=20260423b"></script>
-
   <script>
     const posterOpen = document.querySelector("[data-poster-open]");
     const posterLightbox = document.querySelector("[data-poster-lightbox]");
     const posterClose = document.querySelector("[data-poster-close]");
-    const sessionVideo = document.querySelector(".session-media video");
 
     if (posterOpen && posterLightbox && posterClose) {
       const closePoster = () => {
@@ -886,100 +811,6 @@
       });
     }
 
-    if (sessionVideo) {
-      const sessionCaptions = document.querySelector("[data-session-captions]");
-      const cues = Array.isArray(window.session2Captions) ? window.session2Captions : [];
-      let cueIndex = 0;
-      let nativeTrack = null;
-
-      const formatClock = (seconds) => {
-        const total = Math.max(0, Math.floor(seconds));
-        const mm = String(Math.floor(total / 60)).padStart(2, "0");
-        const ss = String(total % 60).padStart(2, "0");
-        return `${mm}:${ss}`;
-      };
-
-      const renderCaption = () => {
-        if (!sessionCaptions) {
-          return;
-        }
-
-        const time = sessionVideo.currentTime;
-
-        if (cues.length === 0 && !nativeTrack) {
-          const tracks = sessionVideo.textTracks;
-
-          if (tracks && tracks.length > 0) {
-            nativeTrack = tracks[0];
-            nativeTrack.mode = "hidden";
-          }
-        }
-
-        if (cues.length > 0) {
-          while (cueIndex > 0 && time < cues[cueIndex].start) {
-            cueIndex -= 1;
-          }
-
-          while (cueIndex < cues.length - 1 && time > cues[cueIndex].end) {
-            cueIndex += 1;
-          }
-
-          const cue = cues[cueIndex];
-          if (cue && time >= cue.start && time <= cue.end) {
-            sessionCaptions.textContent = cue.text;
-            sessionCaptions.hidden = false;
-            return;
-          }
-
-          const firstCue = cues[0];
-          if (firstCue && time < firstCue.start) {
-            sessionCaptions.textContent = `Subtitulos disponibles a partir de ${formatClock(firstCue.start)}`;
-            sessionCaptions.hidden = false;
-            return;
-          }
-
-          sessionCaptions.textContent = "";
-          sessionCaptions.hidden = true;
-          return;
-        }
-
-        if (nativeTrack) {
-          const activeCue = nativeTrack.activeCues && nativeTrack.activeCues.length > 0
-            ? nativeTrack.activeCues[0]
-            : null;
-
-          if (activeCue && activeCue.text.trim()) {
-            sessionCaptions.textContent = activeCue.text;
-            sessionCaptions.hidden = false;
-            return;
-          }
-
-          const firstCue = nativeTrack.cues && nativeTrack.cues.length > 0
-            ? nativeTrack.cues[0]
-            : null;
-
-          if (firstCue && time < firstCue.startTime) {
-            sessionCaptions.textContent = `Subtitulos disponibles a partir de ${formatClock(firstCue.startTime)}`;
-            sessionCaptions.hidden = false;
-            return;
-          }
-
-          sessionCaptions.textContent = "";
-          sessionCaptions.hidden = true;
-          return;
-        }
-
-        sessionCaptions.textContent = "No se pudieron cargar subtitulos";
-        sessionCaptions.hidden = false;
-      };
-
-      renderCaption();
-      sessionVideo.addEventListener("timeupdate", renderCaption);
-      sessionVideo.addEventListener("seeked", renderCaption);
-      sessionVideo.addEventListener("play", renderCaption);
-      sessionVideo.addEventListener("loadedmetadata", renderCaption);
-      sessionVideo.addEventListener("loadeddata", renderCaption);
-    }
   </script>
 </body>
 </html>
