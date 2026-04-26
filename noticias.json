@@ -22,6 +22,6 @@
       "automatización",
       "RISC-V"
     ],
-    "body": "![Diagrama del pipeline de VerCore](https://cdn.mos.cms.futurecdn.net/wWkmUaJUWsVYiHXLNmLUcg.png)\nUn agente de IA ha diseñado un procesador RISC-V completo en 12 horas...\nEl sistema _Design Conductor_ (modelo subyacente no revelado), desarrollado por la startup [Verkor.io](verkor.io), ha diseñado en 12 horas una CPU RISC-V a partir de un documento de requisitos de sólo 219 palabras. Este proceso lleva habitualmente entre 18 y 36 meses de trabajo. (Más información en el artículo de [Arxiv](https://arxiv.org/abs/2603.08716).)"
+    "body": "![Diagrama del pipeline de VerCore](clubia/images/uploads/2026-04-23-ia-disena-cpu-risc-v.png)\nUn agente de IA ha diseñado un procesador RISC-V completo en 12 horas...\nEl sistema _Design Conductor_ (modelo subyacente no revelado), desarrollado por la startup [Verkor.io](verkor.io), ha diseñado en 12 horas una CPU RISC-V a partir de un documento de requisitos de sólo 219 palabras. Este proceso lleva habitualmente entre 18 y 36 meses de trabajo. (Más información en el artículo de [Arxiv](https://arxiv.org/abs/2603.08716).)"
   }
 ]
