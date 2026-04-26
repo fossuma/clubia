@@ -1,5 +1,5 @@
 ---
-title: "DeepSeek lanza nuevo modelo insignia de IA de código abierto V4"
+title: "Una IA diseña una CPU RISC-V en 12 horas"
 date: 2026-04-24
 draft: false
 url: "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-agent-designs-a-complete-risc-v-cpu-from-a-219-word-spec-in-just-12-hours"
