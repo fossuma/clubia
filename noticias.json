@@ -1,15 +1,14 @@
 [
   {
-    "title": "OpenAI publica su nueva especificación de modelo",
-    "date": "2026-04-25",
+    "title": "DeepSeek lanza nuevo modelo insignia de IA de código abierto V4",
+    "date": "2026-04-24",
     "draft": "false",
-    "url": "https://openai.com/index/model-spec/",
-    "source": "OpenAI",
+    "url": "https://es.finance.yahoo.com/noticias/deepseek-lanza-modelo-insignia-ia-044231457.html",
+    "source": "Yahoo!",
     "tags": [
-      "ética",
-      "alineamiento",
-      "política"
+      "LLM",
+      "DeepSeek"
     ],
-    "body": "OpenAI ha publicado el documento interno que describe los valores y comportamientos que espera de sus modelos. Es una lectura obligada para entender cómo los laboratorios piensan sobre la alineación y qué principios priorizan en situaciones de conflicto."
+    "body": "DeepSeek pone en abierto dos nuevos modelos: DeepSeek-V4-Pro y DeepSeek-V4-Flash. La versión pro cuenta con 1,6 billones de parámetros, mientras que la versión flash es un modelo más ligero, con 284.000 millones de parámetros."
   }
 ]
