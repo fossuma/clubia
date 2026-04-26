@@ -1,0 +1,69 @@
+backend:
+  name: github
+  repo: umafoss/clubia          # Cambia si tu repositorio tiene otro nombre
+  branch: main                  # Rama principal del repositorio
+
+# Carpeta donde se guardan las imágenes subidas desde el CMS
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "noticias"
+    label: "Posts"
+    label_singular: "Post"
+    folder: "noticias"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title"]
+    view_filters:
+      - label: "Publicadas"
+        field: draft
+        pattern: false
+      - label: "Borradores"
+        field: draft
+        pattern: true
+    fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
+        hint: "Titular corto y descriptivo de la noticia."
+
+      - label: "Fecha"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "DD/MM/YYYY"
+        time_format: false
+        default: ""
+        hint: "Fecha de publicación visible en el hilo."
+
+      - label: "Borrador"
+        name: "draft"
+        widget: "boolean"
+        default: false
+        hint: "Actívalo para guardar sin publicar en la web."
+
+      - label: "Enlace original"
+        name: "url"
+        widget: "string"
+        required: false
+        hint: "URL del artículo o fuente original (opcional)."
+
+      - label: "Fuente"
+        name: "source"
+        widget: "string"
+        required: false
+        hint: "Nombre del medio o publicación (p. ej. MIT Technology Review)."
+
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Palabras clave separadas por coma (p. ej. ética, legislación, investigación)."
+
+      - label: "Resumen / comentario"
+        name: "body"
+        widget: "markdown"
+        hint: "Breve resumen o reflexión del equipo sobre esta noticia. Se mostrará en el hilo."

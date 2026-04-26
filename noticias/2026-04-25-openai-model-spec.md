@@ -1,0 +1,10 @@
+---
+title: "OpenAI publica su nueva especificación de modelo"
+date: 2026-04-25
+draft: false
+url: "https://openai.com/index/model-spec/"
+source: "OpenAI"
+tags: [ética, alineamiento, política]
+---
+
+OpenAI ha publicado el documento interno que describe los valores y comportamientos que espera de sus modelos. Es una lectura obligada para entender cómo los laboratorios piensan sobre la alineación y qué principios priorizan en situaciones de conflicto.

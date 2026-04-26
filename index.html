@@ -101,6 +101,12 @@
       color: var(--accent);
     }
 
+    .topbar nav {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+    }
+
     .topbar a {
       color: var(--ink);
       font-weight: 700;
@@ -574,6 +580,108 @@
       }
     }
 
+    /* ── Hilo de Noticias ─────────────────────────────────────── */
+
+    .news-feed {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 0.85rem;
+    }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1.1rem;
+      padding: 0.95rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--surface-muted);
+      transition: border-color 180ms, box-shadow 180ms;
+      animation: rise 600ms ease-out both;
+    }
+
+    .news-item:hover {
+      border-color: rgba(0, 139, 143, 0.38);
+      box-shadow: 0 6px 20px rgba(0, 139, 143, 0.1);
+    }
+
+    .news-dot {
+      margin-top: 0.45rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .news-body {
+      display: grid;
+      gap: 0.3rem;
+    }
+
+    .news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem 0.7rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #4d6269;
+    }
+
+    .news-date {
+      letter-spacing: 0.03em;
+    }
+
+    .news-source {
+      color: #0d7277;
+      background: rgba(0, 139, 143, 0.09);
+      border: 1px solid rgba(0, 139, 143, 0.22);
+      border-radius: 999px;
+      padding: 0.1rem 0.48rem;
+    }
+
+    .news-tag {
+      color: #5e5e6a;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 999px;
+      padding: 0.1rem 0.42rem;
+      font-size: 0.73rem;
+    }
+
+    .news-title {
+      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+      font-size: clamp(1rem, 1.8vw, 1.13rem);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .news-title a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 160ms, color 160ms;
+    }
+
+    .news-title a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .news-summary {
+      color: var(--ink-soft);
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+
+    .news-empty {
+      text-align: center;
+      color: var(--ink-soft);
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      opacity: 0.7;
+    }
+
     @media (max-width: 850px) {
       .hero {
         padding-right: clamp(1.2rem, 4vw, 2rem);
@@ -613,7 +721,10 @@
   <div class="container">
     <header class="topbar">
       <div class="brand">Club <span>de la IA</span></div>
-      <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio oficial</a>
+      <nav>
+        <a href="#noticias">Noticias</a>
+        <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio oficial</a>
+      </nav>
     </header>
 
     <section class="hero" aria-labelledby="hero-title">
@@ -754,6 +865,19 @@
         </section>
       </div>
 
+      <section id="noticias" class="section-card" aria-labelledby="noticias-title">
+        <div class="section-title">
+          <span class="kicker">Actualidad</span>
+          <h2 id="noticias-title">Hilo de noticias</h2>
+        </div>
+        <p class="section-desc">
+          Selección de artículos y recursos de interés curada por el equipo del club.
+        </p>
+        <div class="news-feed" id="news-feed" aria-label="Hilo de noticias seleccionadas">
+          <p class="news-empty">Cargando noticias…</p>
+        </div>
+      </section>
+
       <section id="enlaces" class="section-card resource" aria-labelledby="enlaces-title">
         <div class="section-title">
           <span class="kicker">Herramientas</span>
@@ -779,6 +903,62 @@
     <button class="poster-lightbox-close" type="button" aria-label="Cerrar cartel ampliado" data-poster-close>&times;</button>
     <img src="stuff/poster/poster_image.jpg" alt="Póster completo de la sesión sobre dependencia cognitiva" />
   </div>
+
+  <!-- ── Script: carga noticias desde noticias.json (generado por GitHub Action) ── -->
+  <script>
+    (async function loadNews() {
+      const feed = document.getElementById("news-feed");
+
+      // Markdown mínimo → HTML
+      function miniMd(md) {
+        return md
+          .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+          .replace(/\*(.*?)\*/g, "<em>$1</em>")
+          .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+          .split(/\n{2,}/).map(p => `<p>${p.trim()}</p>`).join("\n");
+      }
+
+      function formatDate(str) {
+        if (!str) return "";
+        const d = new Date(str);
+        return isNaN(d) ? str : d.toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" });
+      }
+
+      try {
+        const res = await fetch("noticias.json");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const posts = await res.json();
+
+        if (!posts.length) {
+          feed.innerHTML = '<p class="news-empty">Todavía no hay noticias publicadas.</p>';
+          return;
+        }
+
+        feed.innerHTML = posts.map((p, i) => `
+          <article class="news-item" style="animation-delay:${i * 55}ms">
+            <div class="news-dot" aria-hidden="true"></div>
+            <div class="news-body">
+              <div class="news-meta">
+                ${p.date ? `<span class="news-date">${formatDate(p.date)}</span>` : ""}
+                ${p.source ? `<span class="news-source">${p.source}</span>` : ""}
+                ${(p.tags || []).map(t => `<span class="news-tag">${t}</span>`).join("")}
+              </div>
+              <h3 class="news-title">
+                ${p.url
+                  ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.title || "Sin título"}</a>`
+                  : (p.title || "Sin título")}
+              </h3>
+              ${p.body ? `<div class="news-summary">${miniMd(p.body)}</div>` : ""}
+            </div>
+          </article>
+        `).join("");
+
+      } catch (err) {
+        feed.innerHTML = '<p class="news-empty">Todavía no hay noticias publicadas.</p>';
+        console.warn("noticias.json:", err.message);
+      }
+    })();
+  </script>
 
   <script>
     const posterOpen = document.querySelector("[data-poster-open]");
