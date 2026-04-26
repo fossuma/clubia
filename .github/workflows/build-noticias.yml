@@ -1,4 +1,4 @@
-name: Generar noticias.json
+name: Generar noticias.json y feed.xml
 
 on:
   push:
@@ -6,6 +6,7 @@ on:
     paths:
       - "noticias/**"
       - ".github/workflows/build-noticias.yml"
+      - "scripts/build.py"
 
 jobs:
   build:
@@ -16,101 +17,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generar noticias.json y feed.xml desde noticias/*.md
+      - name: Generar noticias.json y feed.xml
+        run: python3 scripts/build.py
+
+      - name: Commit si hay cambios
         run: |
-          python3 - <<'EOF'
-          import os, json, re
-          from datetime import datetime, timezone
-
-          FOLDER = "noticias"
-          OUT_JSON = "noticias.json"
-          OUT_RSS  = "feed.xml"
-          SITE_URL = "https://fossuma.github.io/clubia"
-          SITE_TITLE = "Club de la IA — Hilo de noticias"
-          SITE_DESC  = "Selección de artículos curada por el Club de la IA"
-
-          def parse_fm(text):
-              m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n?", text, re.DOTALL)
-              fm, body = {}, text
-              if m:
-                  body = text[m.end():]
-                  for line in m.group(1).splitlines():
-                      if ":" not in line:
-                          continue
-                      key, _, val = line.partition(":")
-                      key, val = key.strip(), val.strip().strip('"\'')
-                      fm[key] = val
-              if "tags" in fm:
-                  fm["tags"] = [t.strip() for t in re.sub(r"[\[\]]", "", fm["tags"]).split(",") if t.strip()]
-              fm["body"] = body.strip()
-              return fm
-
-          def to_rfc822(date_str):
-              try:
-                  d = datetime.strptime(date_str[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-                  return d.strftime("%a, %d %b %Y %H:%M:%S +0000")
-              except:
-                  return ""
-
-          def escape_xml(s):
-              return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
-
-          posts = []
-          if os.path.isdir(FOLDER):
-              for fname in os.listdir(FOLDER):
-                  if not fname.endswith(".md"):
-                      continue
-                  with open(os.path.join(FOLDER, fname), encoding="utf-8") as f:
-                      fm = parse_fm(f.read())
-                  if fm.get("draft") in ("true", True):
-                      continue
-                  posts.append(fm)
-
-          posts.sort(key=lambda p: p.get("date", ""), reverse=True)
-
-          # noticias.json
-          with open(OUT_JSON, "w", encoding="utf-8") as f:
-              json.dump(posts, f, ensure_ascii=False, indent=2)
-          print(f"✅  {len(posts)} noticia(s) → {OUT_JSON}")
-
-          # feed.xml
-          items = ""
-          for p in posts:
-              title = escape_xml(p.get("title", "Sin título"))
-              link  = escape_xml(p.get("url", SITE_URL))
-              desc  = escape_xml(p.get("body", ""))
-              source = escape_xml(p.get("source", ""))
-              date  = to_rfc822(p.get("date", ""))
-              items += f"""
-    <item>
-      <title>{title}</title>
-      <link>{link}</link>
-      <description>{desc}{(' — ' + source) if source else ''}</description>
-      <pubDate>{date}</pubDate>
-      <guid>{link}</guid>
-    </item>"""
-
-          now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
-          rss = f"""<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-  <channel>
-    <title>{escape_xml(SITE_TITLE)}</title>
-    <link>{SITE_URL}</link>
-    <description>{escape_xml(SITE_DESC)}</description>
-    <language>es</language>
-    <lastBuildDate>{now}</lastBuildDate>{items}
-  </channel>
-</rss>"""
-
-          with open(OUT_RSS, "w", encoding="utf-8") as f:
-              f.write(rss)
-          print(f"✅  feed.xml generado")
-          EOF
-
-      - name: Commit noticias.json si hay cambios
-        run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add noticias.json feed.xml
-          git diff --cached --quiet || git commit -m "chore: actualizar noticias.json [skip ci]"
+          git diff --cached --quiet || git commit -m "chore: actualizar noticias.json y feed.xml [skip ci]"
           git push
