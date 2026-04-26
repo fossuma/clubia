@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Club de la IA — Hilo de noticias</title>
+    <link>https://fossuma.github.io/clubia</link>
+    <description>Selección de artículos curada por el Club de la IA</description>
+    <language>es</language>
+    <lastBuildDate>Sun, 26 Apr 2026 10:29:22 +0000</lastBuildDate>
+  <item>
+    <title>OpenAI publica su nueva especificación de modelo</title>
+    <link>https://openai.com/index/model-spec/</link>
+    <description>OpenAI ha publicado el documento interno que describe los valores y comportamientos que espera de sus modelos. Es una lectura obligada para entender cómo los laboratorios piensan sobre la alineación y qué principios priorizan en situaciones de conflicto. — OpenAI</description>
+    <pubDate>Sat, 25 Apr 2026 00:00:00 +0000</pubDate>
+    <guid>https://openai.com/index/model-spec/</guid>
+  </item>
+  </channel>
+</rss>
