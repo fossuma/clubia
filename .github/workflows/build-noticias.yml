@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "_noticias/**"
+      - "noticias/**"
       - ".github/workflows/build-noticias.yml"
 
 jobs:
