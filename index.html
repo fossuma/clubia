@@ -531,30 +531,19 @@
       font-size: 0.95rem;
     }
 
-    .session-links {
-      margin-top: 0.9rem;
+    .session-simple-list {
+      margin: 0.4rem 0 0;
+      padding-left: 1.15rem;
       display: grid;
-      gap: 0.7rem;
+      gap: 0.45rem;
+      color: #2f4f59;
     }
 
-    .session-link-item {
-      background: #f8fcf9;
-      border: 1px solid #d4e4dc;
-      border-radius: 12px;
-      padding: 0.75rem 0.9rem;
-      display: grid;
-      gap: 0.3rem;
+    .session-simple-list li {
+      line-height: 1.5;
     }
 
-    .session-link-title {
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      color: #0e6e74;
-    }
-
-    .session-link-item a {
+    .session-simple-list a {
       color: #0c636b;
       font-weight: 700;
       text-underline-offset: 0.18em;
@@ -852,37 +841,13 @@
             recursos para la escuela.
           </p>
 
-          <ul class="topics" aria-label="Propuestas del kickoff">
-            <li class="topic">
-              <span class="meta">Sesión pública</span>
-              <h3>Dependencia cognitiva de la IA </h3>
-              <p>Propuesta de Lucía. Buscar ponente de Psicología (Dpto. Personalidad)</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Sesión pública</span>
-              <h3>Oportunidades y amenazas para el sector informático</h3>
-              <p>Propuesta de Cristian para debatir impacto laboral y técnico de la IA.</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Sesión pública</span>
-              <h3>Ciberseguridad post-IA</h3>
-              <p>Propuesta de Víctor con intervención de Ale.</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Sesión pública</span>
-              <h3>Qué nos enseña la IA y límites en tareas creativas</h3>
-              <p>Propuesta de Celia y Víctor, con intervención de FV y referencia al documental AlphaFold.</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Sesión pública</span>
-              <h3>Ética en el uso de la IA generativa</h3>
-              <p>Propuesta de Hugo. Buscar ponente (Víctor Muñoz).</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Proyecto educativo</span>
-              <h3>Manual de uso de la IA y curso cero</h3>
-              <p>Crear una guía para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</p>
-            </li>
+          <ul class="session-simple-list" aria-label="Propuestas del kickoff">
+            <li><strong>Dependencia cognitiva de la IA</strong> (sesión pública). Propuesta de Lucía; buscar ponente de Psicología (Dpto. Personalidad).</li>
+            <li><strong>Oportunidades y amenazas para el sector informático</strong> (sesión pública). Propuesta de Cristian para debatir impacto laboral y técnico de la IA.</li>
+            <li><strong>Ciberseguridad post-IA</strong> (sesión pública). Propuesta de Víctor con intervención de Ale.</li>
+            <li><strong>Qué nos enseña la IA y límites en tareas creativas</strong> (sesión pública). Propuesta de Celia y Víctor, con intervención de FV y referencia al documental AlphaFold.</li>
+            <li><strong>Ética en el uso de la IA generativa</strong> (sesión pública). Propuesta de Hugo; buscar ponente (Víctor Muñoz).</li>
+            <li><strong>Manual de uso de la IA y curso cero</strong> (proyecto educativo). Crear una guía para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</li>
           </ul>
         </section>
 
@@ -892,37 +857,16 @@
             <h2 id="sesion-2-title">Dependencia cognitiva - 23/04/2026</h2>
           </div>
           <p class="section-desc">
-            En esta sesión, se presentó un vídeo y varios estudios que advertían sobre como cada vez dependemos más de la inteligencia artificial y esto es un gran problema de cara al futuro debido a que podríamos perder capacidades mentales, ya que nuestro cerebro "no hace grandes esfuerzos" en la mayoría de las situaciones, acudimos a la IA hasta para tareas muy sencillas como una pequeña búsqueda o cálculo trivial. Debatimos ampliamente sobre este tema y sacamos diversas conclusiones de cara al futuro:
+            En esta sesión, se presentó un vídeo y varios estudios que advertían sobre como cada vez <strong> dependemos más de la inteligencia artificial</strong> y esto es un gran problema de cara al futuro debido a que podríamos <strong> perder capacidades mentales</strong>, ya que nuestro cerebro "no hace grandes esfuerzos" en la mayoría de las situaciones, <strong>acudimos a la IA hasta para tareas muy sencillas</strong> como una pequeña búsqueda o cálculo trivial. Debatimos ampliamente sobre este tema y sacamos diversas conclusiones de cara al futuro:
           </p>
 
-          <ul class="topics" aria-label="Conclusiones de la sesión 2">
-            <li class="topic">
-              <span class="meta">Proyecto educativo</span>
-              <h3>Incluir estudio de deuda cognitiva en el Observatorio</h3>
-              <p>Se propone incorporar este análisis como línea de seguimiento para medir riesgos y evolución en el uso cotidiano de IA.</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Proyecto educativo</span>
-              <h3>Entrevistas a desarrolladores senior en empresas malagueñas</h3>
-              <p>Recoger experiencias reales sobre su uso de la IA: más fácil en formato texto y más complejo en videollamada.</p>
-            </li>
-            <li class="topic">
-              <span class="meta">Conclusión</span>
-              <h3>La IA como herramienta potencialmente igualitaria</h3>
-              <p>Puede contribuir a reducir desigualdades si su acceso, formación y uso responsable se fomentan de manera inclusiva.</p>
-            </li>
-          </ul>
-
-          <div class="session-links" aria-label="Recursos de la sesión 2">
-            <div class="session-link-item">
-              <p class="session-link-title">Video de la sesión</p>
-              <a href="https://www.youtube.com/watch?v=S6MNsHmD9Sk" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=S6MNsHmD9Sk</a>
-            </div>
-            <div class="session-link-item">
-              <p class="session-link-title">Encuesta sobre dependencia cognitiva</p>
-              <a href="https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/" target="_blank" rel="noopener noreferrer">https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/</a>
-            </div>
-          </div>
+          <ul class="session-simple-list" aria-label="Conclusiones y recursos de la sesión 2">
+            <li>Incluir estudio de deuda cognitiva en el <strong>Observatorio para medir riesgos y evolución en el uso cotidiano de IA</strong>.</li>
+            <li>Realizar entrevistas a <strong>desarrolladores senior</strong> en empresas malagueñas sobre su uso de la IA: más fácil en texto y más complejo en videollamada.</li>
+            <li><strong>La IA es una herramienta potencialmente igualitaria</strong> y puede contribuir a reducir desigualdades si su uso es inclusivo y responsable.</li>
+            <li>Video de la sesión: <a href="https://www.youtube.com/watch?v=S6MNsHmD9Sk" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=S6MNsHmD9Sk</a></li>
+            <li>Encuesta sobre dependencia cognitiva: <a href="https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/" target="_blank" rel="noopener noreferrer">https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/</a></li>
+          </ul> 
         </section>
 
         <section id="sesion-3" class="section-card" aria-labelledby="sesion-3-title">
