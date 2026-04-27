@@ -13,6 +13,19 @@
     "body": "En 9 segundos, un agente de programación basado en Claude Opus 4.6 borra todos los datos de una empresa y la copia de seguridad."
   },
   {
+    "title": "¿El fin de la IA segura? Qué es Mythos y por qué Anthropic ha despertado expectación mundial",
+    "date": "2026-04-27",
+    "draft": "false",
+    "url": "https://www.publico.es/ciencias/tecnologia/ia-segura-mythos-anthropic-despertado-expectacion-mundial.html",
+    "source": "Público/EFE",
+    "tags": [
+      "Anthropic",
+      "Mythos",
+      "ciberseguridad"
+    ],
+    "body": "*Claude Mythos Preview* es una IA especializada en detectar vulnerabilidades que podría poner en manos de crackers la seguridad de muchas empresas. Anthropic, por ahora, ha revelado sus resultados a un grupo limitado de empresas a traves del Proyecto *Glasswing*."
+  },
+  {
     "title": "DeepSeek lanza nuevo modelo insignia de IA de código abierto V4",
     "date": "2026-04-24",
     "draft": "false",
