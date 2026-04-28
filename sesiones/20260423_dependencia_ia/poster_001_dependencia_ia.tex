@@ -2,7 +2,7 @@
 
 \documentclass[a4paper]{article}
 
-\usepackage[a4paper, margin=1.5cm, top=0.8cm]{geometry}
+\usepackage[a4paper, margin=1.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fontenc}
 \usepackage[utf8]{inputenc}
@@ -16,19 +16,13 @@
 \usepackage{enumitem}
 \usepackage{calc}
 \usepackage{anyfontsize}
-\usepackage{fontspec}
 \usepackage{emoji}
-
 \setmainfont{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}]
 
 \pagecolor{white}
 \color{black}
 
 \pagestyle{empty}
-
-\newif\ifmostrarinfo
-% Cambia \mostrarinfotrue a \mostrarinfofalse para ocultar la tabla al final del póster
-\mostrarinfofalse
 
 % Custom thick rule
 \newcommand{\thickrule}{\noindent\rule{\linewidth}{2.5pt}}
@@ -67,28 +61,23 @@
 \vspace{25pt}
 
 %% ── PRIMERA SESIÓN badge ───────────────────────────────────────────────────
-\ifmostrarinfo
-  \fbox{%
-    \parbox{0.55\textwidth}{%
-      \centering\vspace{6pt}
-      {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
-      \vspace{6pt}
-    }%
-  }
+\fbox{%
+  \parbox{0.55\textwidth}{%
+    \centering\vspace{6pt}
+    {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
+    \vspace{6pt}
+  }%
+}
 
-  \vspace{40pt}
-\fi
+\vspace{40pt}
 
 %% ── TOPIC ─────────────────────────────────────────────────────────────────
-\includegraphics[height=0.20\paperheight]{../../images/poster_ciberseguridad_postia.png}
-
-\vspace{16pt}
 {\color[RGB]{20,60,120}\fontsize{56}{62}\selectfont\bfseries
-  Ciberseguridad post-IA}
+  Dependencia cognitiva de la IA}
 
 \vspace{28pt}
 {\color[RGB]{80,120,180}\fontsize{30}{24}\selectfont
-  \textit{Si no usas IA, ya has perdido... }} {\fontsize{24}{28}\selectfont\emoji{exploding-head}}
+  \textit{¿Vamos a dejar de pensar?}} {\fontsize{24}{28}\selectfont\emoji{zany-face}}
 
 \vspace{30pt}
 \thinrule
@@ -97,7 +86,7 @@
 %% ── SESSION DATA ──────────────────────────────────────────────────────────
 \begin{tabular}{ccc}
   \begin{minipage}{0.28\textwidth}\centering
-    {\fontsize{22}{26}\selectfont\bfseries 30 de abril}
+    {\fontsize{22}{26}\selectfont\bfseries 23 de abril}
   \end{minipage}
   &
   \begin{minipage}{0.28\textwidth}\centering
@@ -115,27 +104,25 @@
 \vspace{15pt}
 
 %% ── STRUCTURE ─────────────────────────────────────────────────────────────
-\ifmostrarinfo
-  {\fontsize{15}{13}\selectfont\scshape Estructura de la sesi\'on}
+{\fontsize{15}{13}\selectfont\scshape Estructura de la sesi\'on}
 
-  \vspace{10pt}
+\vspace{10pt}
 
-  {\fontsize{15}{10}\selectfont
-  \begin{tabular}{>{\centering\arraybackslash}p{0.20\textwidth}%
-                  >{\centering\arraybackslash}p{0.20\textwidth}%
-                  >{\centering\arraybackslash}p{0.20\textwidth}%
-                  >{\centering\arraybackslash}p{0.20\textwidth}}
-    \midrule[1.2pt]
-    \rule{0pt}{14pt}%
-    {\bfseries 01} & {\bfseries 02} & {\bfseries 03} & {\bfseries 04}\\[3pt]
-    V\'{\i}deo &
-    Art\'{\i}culos &
-    Debate &
-    Conclusiones\\[6pt]
-    \midrule[1.2pt]
-  \end{tabular}
-  }
-\fi
+{\fontsize{15}{10}\selectfont
+\begin{tabular}{>{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}%
+                >{\centering\arraybackslash}p{0.20\textwidth}}
+  \midrule[1.2pt]
+  \rule{0pt}{14pt}%
+  {\bfseries 01} & {\bfseries 02} & {\bfseries 03} & {\bfseries 04}\\[3pt]
+  V\'{\i}deo &
+  Art\'{\i}culos &
+  Debate &
+  Conclusiones\\[6pt]
+  \midrule[1.2pt]
+\end{tabular}
+}
 
 \vspace{6pt}
 {\fontsize{15}{12}\selectfont
@@ -143,10 +130,8 @@
 
 \vspace{10pt}
 \includegraphics[width=3cm]{../../images/qr.png}\\[1pt]
-\ifmostrarinfo
-  {\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
-  \vspace{18pt}
-\fi
+{\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
+\vspace{18pt}
 
 %% ── FOOTER ────────────────────────────────────────────────────────────────
 {\fontsize{15}{11}\selectfont

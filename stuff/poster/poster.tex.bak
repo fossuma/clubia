@@ -2,7 +2,7 @@
 
 \documentclass[a4paper]{article}
 
-\usepackage[a4paper, margin=1.5cm, top=0.8cm]{geometry}
+\usepackage[a4paper, margin=1.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fontenc}
 \usepackage[utf8]{inputenc}
@@ -16,9 +16,7 @@
 \usepackage{enumitem}
 \usepackage{calc}
 \usepackage{anyfontsize}
-\usepackage{fontspec}
 \usepackage{emoji}
-
 \setmainfont{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}]
 
 \pagecolor{white}
@@ -67,28 +65,29 @@
 \vspace{25pt}
 
 %% ── PRIMERA SESIÓN badge ───────────────────────────────────────────────────
-\ifmostrarinfo
-  \fbox{%
-    \parbox{0.55\textwidth}{%
-      \centering\vspace{6pt}
-      {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
-      \vspace{6pt}
-    }%
-  }
+\fbox{%
+  \parbox{0.55\textwidth}{%
+    \centering\vspace{6pt}
+    {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
+    \vspace{6pt}
+  }%
+}
 
-  \vspace{40pt}
-\fi
+\vspace{40pt}
 
 %% ── TOPIC ─────────────────────────────────────────────────────────────────
-\includegraphics[height=0.20\paperheight]{../../images/poster_ciberseguridad_postia.png}
+\begin{minipage}[c]{0.20\textwidth} % Ajustamos la minipage al 20% del ancho del texto
+  \centering
+  \includegraphics[width=0.20\paperwidth]{../../images/poster_ciberseguridad_postia.png}
+\end{minipage}%
+\hspace{0.04\textwidth}%
 
-\vspace{16pt}
 {\color[RGB]{20,60,120}\fontsize{56}{62}\selectfont\bfseries
   Ciberseguridad post-IA}
 
 \vspace{28pt}
 {\color[RGB]{80,120,180}\fontsize{30}{24}\selectfont
-  \textit{Si no usas IA, ya has perdido... }} {\fontsize{24}{28}\selectfont\emoji{exploding-head}}
+  \textit{Si no usas IA, ya has perdido}} {\fontsize{24}{28}\selectfont\emoji{exploding-head}}
 
 \vspace{30pt}
 \thinrule
@@ -143,10 +142,8 @@
 
 \vspace{10pt}
 \includegraphics[width=3cm]{../../images/qr.png}\\[1pt]
-\ifmostrarinfo
-  {\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
-  \vspace{18pt}
-\fi
+{\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
+\vspace{18pt}
 
 %% ── FOOTER ────────────────────────────────────────────────────────────────
 {\fontsize{15}{11}\selectfont
