@@ -288,6 +288,23 @@
       gap: 0.85rem;
     }
 
+    .poster-frame {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      border-radius: 12px;
+      border: 1px solid #d3e1d9;
+      overflow: hidden;
+      background: #ffffff;
+      box-shadow: 0 16px 40px rgba(12, 33, 40, 0.12);
+    }
+
+    .poster-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 0;
+    }
+
     .poster-card {
       display: grid;
       grid-template-columns: 1fr;
@@ -300,13 +317,11 @@
     }
 
     .poster-card img {
-      width: min(270px, 100%);
+      width: 100%;
       height: auto;
       display: block;
-      justify-self: start;
-      border-radius: 10px;
-      border: 1px solid #d3e1d9;
-      background: #ffffff;
+      border: 0;
+      background: transparent;
     }
 
     .poster-open {
@@ -799,31 +814,20 @@
 
     <section id="carteles" class="section-card posters-section" aria-labelledby="carteles-title">
       <div class="section-title">
-        <span class="kicker">Próximas sesiones</span>
-        <h2 id="carteles-title">Carteles informativos</h2>
+        <span class="kicker">Próxima sesión</span>
+        <h2 id="carteles-title">Cartel principal</h2>
       </div>
       <p class="section-desc">
-        Aquí iremos publicando los carteles de reuniones del club con la información clave de cada sesión.
+        Cartel destacado de la sesión sobre ciberseguridad post-IA.
       </p>
 
-      <div class="poster-grid" aria-label="Carteles de reuniones">
+      <div class="poster-grid" aria-label="Cartel de la sesión de ciberseguridad post-IA">
         <article class="poster-card">
-          <div class="poster-stack">
-            <button class="poster-open" type="button" aria-label="Ampliar cartel de la sesión 2" data-poster-open>
-              <img
-                src="stuff/poster/poster_image.jpg"
-                alt="Póster de la sesión sobre dependencia cognitiva"
-              />
-            </button>
-            <div class="poster-links">
-              <a class="btn btn-primary poster-jump" href="#sesion-2">Info</a>
-              <a
-                class="btn btn-secondary poster-jump"
-                href="https://discordapp.com/channels/1493909574833672295/1493911797588033546/1496636073911128197"
-                target="_blank"
-                rel="noopener noreferrer"
-              >Asistencia</a>
-            </div>
+          <div class="poster-frame">
+            <img
+              src="sesiones/20260430_ciberseguridad_postia/poster_ciberseguridad_postia.png"
+              alt="Cartel de la sesión Ciberseguridad post-IA"
+            />
           </div>
         </article>
       </div>
@@ -941,11 +945,6 @@
     </footer>
   </div>
 
-  <div class="poster-lightbox" hidden data-poster-lightbox aria-modal="true" role="dialog" aria-label="Cartel ampliado de la sesión 2">
-    <button class="poster-lightbox-close" type="button" aria-label="Cerrar cartel ampliado" data-poster-close>&times;</button>
-    <img src="stuff/poster/poster_image.jpg" alt="Póster completo de la sesión sobre dependencia cognitiva" />
-  </div>
-
   <!-- ── Script: carga noticias desde noticias.json (generado por GitHub Action) ── -->
   <script>
     (async function loadNews() {
@@ -1020,39 +1019,6 @@
         console.warn("noticias.json:", err.message);
       }
     })();
-  </script>
-
-  <script>
-    const posterOpen = document.querySelector("[data-poster-open]");
-    const posterLightbox = document.querySelector("[data-poster-lightbox]");
-    const posterClose = document.querySelector("[data-poster-close]");
-
-    if (posterOpen && posterLightbox && posterClose) {
-      const closePoster = () => {
-        posterLightbox.hidden = true;
-        document.body.style.overflow = "";
-      };
-
-      posterOpen.addEventListener("click", () => {
-        posterLightbox.hidden = false;
-        document.body.style.overflow = "hidden";
-      });
-
-      posterClose.addEventListener("click", closePoster);
-
-      posterLightbox.addEventListener("click", (event) => {
-        if (event.target === posterLightbox) {
-          closePoster();
-        }
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !posterLightbox.hidden) {
-          closePoster();
-        }
-      });
-    }
-
   </script>
 </body>
 </html>
