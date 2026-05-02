@@ -3,36 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Club de la IA</title>
+  <title>ClubIA — Blog del Club de la IA</title>
   <link rel="alternate" type="application/rss+xml" title="Club de la IA — Hilo de noticias" href="/clubia/feed.xml" />
   <meta
     name="description"
-    content="Club de la IA: sesiones, propuestas y recursos para debatir el impacto real de la inteligencia artificial."
+    content="Club de la IA en formato subreddit: sesiones, propuestas y recursos sobre el impacto real de la inteligencia artificial."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Manrope:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap"
     rel="stylesheet"
   />
 
   <style>
     :root {
-      --bg: #f4f6f3;
-      --bg-soft: #eaf1ea;
+      --bg: #ffffff;
+      --bg-2: #ffffff;
       --surface: #ffffff;
-      --surface-muted: #f5faf6;
+      --surface-soft: #f5faf6;
       --ink: #132126;
       --ink-soft: #44606a;
+      --line: #d4e3dc;
       --accent: #008b8f;
       --accent-2: #ff7a32;
-      --border: #d4e3dc;
+      --accent-3: #ff9b5d;
       --shadow: 0 20px 55px rgba(12, 33, 40, 0.14);
-      --radius-lg: 22px;
-      --radius-md: 16px;
+      --radius: 16px;
       --radius-sm: 12px;
-      --max-width: 1080px;
+      --max-width: 1200px;
     }
 
     * {
@@ -47,188 +47,106 @@
 
     body {
       min-height: 100vh;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       color: var(--ink);
-      font-family: "Manrope", "Segoe UI", sans-serif;
+      background: #ffffff;
       line-height: 1.55;
-      background:
-        radial-gradient(1200px 700px at -10% 0%, rgba(0, 139, 143, 0.2), transparent 56%),
-        radial-gradient(1000px 650px at 115% 14%, rgba(255, 122, 50, 0.16), transparent 60%),
-        linear-gradient(180deg, var(--bg-soft) 0%, var(--bg) 56%, #f9fcf9 100%);
-      overflow-x: hidden;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        linear-gradient(rgba(19, 33, 38, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(19, 33, 38, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-      mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
-      opacity: 0.4;
-    }
-
-    .container {
-      width: min(var(--max-width), 92vw);
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar {
-      margin-top: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.85rem 1.2rem;
-      background: rgba(255, 255, 255, 0.74);
-      border: 1px solid rgba(212, 227, 220, 0.8);
-      border-radius: 14px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 28px rgba(10, 30, 32, 0.08);
-    }
-
-    .brand {
-      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-      font-weight: 800;
-      letter-spacing: 0.01em;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-    }
-
-    .brand span {
+    a {
       color: var(--accent);
-    }
-
-    .topbar nav {
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-
-    .topbar a {
-      color: var(--ink);
-      font-weight: 700;
       text-decoration: none;
-      font-size: 0.92rem;
     }
 
-    .hero {
-      margin-top: 1.4rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: clamp(1.6rem, 4vw, 3rem);
-      padding-right: clamp(8.2rem, 20vw, 13.2rem);
-      box-shadow: var(--shadow);
-      display: grid;
-      gap: 1.4rem;
-      position: relative;
-      overflow: hidden;
-      animation: rise 700ms ease-out both;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      right: clamp(-3.8rem, -4vw, -1.4rem);
-      top: clamp(-2.4rem, -2vw, -0.8rem);
-      width: clamp(200px, 30vw, 290px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0, 139, 143, 0.18) 0%, rgba(255, 122, 50, 0.08) 48%, transparent 72%);
-      pointer-events: none;
-    }
-
-    .hero-logo {
-      position: absolute;
-      top: clamp(0.9rem, 1.9vw, 1.35rem);
-      right: clamp(0.9rem, 2vw, 1.4rem);
-      width: clamp(132px, 17vw, 190px);
-      aspect-ratio: 1;
-      display: grid;
-      place-items: center;
-      border-radius: 0;
-      background: transparent;
-      border: 0;
-      box-shadow: none;
-      z-index: 1;
-    }
-
-    .hero-logo img {
-      width: 100%;
-      height: auto;
-      display: block;
-      filter: drop-shadow(0 6px 10px rgba(10, 35, 39, 0.2));
-      opacity: 0.98;
-    }
-
-    .hero .label {
-      width: fit-content;
-      padding: 0.4rem 0.75rem;
-      border-radius: 999px;
-      background: linear-gradient(92deg, rgba(0, 139, 143, 0.12), rgba(255, 122, 50, 0.13));
-      border: 1px solid rgba(0, 139, 143, 0.25);
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
+    a:hover {
       color: #0d5d61;
     }
 
-    h1,
-    h2,
-    h3 {
-      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-      line-height: 1.08;
-      text-wrap: balance;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    h1 {
-      font-size: clamp(2.2rem, 5.5vw, 4.1rem);
-      max-width: 16ch;
-      letter-spacing: -0.02em;
+    .page {
+      width: min(var(--max-width), 92vw);
+      margin: 2rem auto 2.5rem;
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 1.8rem;
     }
 
-    .hero p {
-      max-width: 66ch;
-      color: var(--ink-soft);
-      font-size: clamp(1rem, 1.55vw, 1.18rem);
-    }
-
-    .hero-actions {
+    .topbar {
+      background: transparent;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0 0 1.4rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.75rem;
+      justify-content: space-between;
+      gap: 1.2rem;
+      animation: rise 700ms ease-out both;
+    }
+
+    .brand {
+      display: flex;
+      gap: 1.1rem;
+      align-items: center;
+    }
+
+    .brand img {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      border-radius: 14px;
+      background: var(--surface-soft);
+      padding: 0.4rem;
+      border: 1px solid var(--line);
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .brand-text h1 {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      letter-spacing: -0.02em;
+      margin-top: 0.25rem;
+    }
+
+    .brand-text p {
+      color: var(--ink-soft);
+      max-width: 55ch;
+      margin-top: 0.35rem;
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      margin-left: auto;
     }
 
     .btn {
-      border: 0;
-      text-decoration: none;
+      border: 1px solid transparent;
       border-radius: 999px;
-      padding: 0.75rem 1.25rem;
+      padding: 0.6rem 1.2rem;
       font-weight: 700;
-      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
-    }
-
-    .btn-primary {
-      color: #f8ffff;
-      background: linear-gradient(125deg, #00757a, #009ba0);
-      box-shadow: 0 10px 28px rgba(0, 139, 143, 0.35);
-    }
-
-    .btn-secondary {
-      color: var(--ink);
-      background: #f7f7f0;
-      border: 1px solid #e5dfcf;
+      font-size: 0.92rem;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
     }
 
     .btn-discord {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.62rem;
       color: #ffffff;
       background: linear-gradient(125deg, #6e2cff, #a442ff 52%, #7a35ff);
       border: 1px solid rgba(136, 72, 255, 0.62);
@@ -246,352 +164,226 @@
       box-shadow: 0 15px 34px rgba(118, 52, 255, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.28);
     }
 
+    .btn-outline {
+      background: var(--surface);
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .btn-secondary {
+      background: rgba(0, 139, 143, 0.12);
+      border-color: rgba(0, 139, 143, 0.28);
+      color: #0d5d61;
+    }
+
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
-    .stats {
-      margin-top: 0.25rem;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.75rem;
-    }
-
-    .stat {
-      background: var(--surface-muted);
-      border: 1px solid #d8e8df;
-      border-radius: var(--radius-sm);
-      padding: 0.8rem 0.9rem;
-    }
-
-    .stat strong {
+    .layout {
       display: block;
-      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-      font-size: 1.45rem;
-      line-height: 1.05;
-      color: #0a6770;
     }
 
-    .stat span {
-      color: #4d646d;
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    .posters-section {
-      margin-top: 1.2rem;
-      animation: rise 680ms ease-out both;
-    }
-
-    .poster-grid {
-      display: grid;
-      gap: 0.85rem;
-    }
-
-    .poster-frame {
-      width: min(760px, 100%);
+    .feed {
+      max-width: 760px;
       margin: 0 auto;
-      border-radius: 12px;
-      border: 1px solid #d3e1d9;
-      overflow: hidden;
-      background: #ffffff;
-      box-shadow: 0 16px 40px rgba(12, 33, 40, 0.12);
+      padding: 0 0.3rem;
     }
 
-    .poster-frame img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 0;
-    }
-
-    .poster-card {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.9rem;
-      align-items: start;
-      padding: 0.9rem;
-      border: 1px solid #d2e3db;
-      border-radius: 14px;
-      background: linear-gradient(150deg, #f8fdf9, #eef6f2 55%, #eaf5f5);
-    }
-
-    .poster-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 0;
-      background: transparent;
-    }
-
-    .poster-open {
-      border: 0;
-      padding: 0;
-      background: transparent;
-      cursor: zoom-in;
-      width: 100%;
-    }
-
-    .poster-open img {
-      width: 100%;
-    }
-
-    .poster-stack {
-      width: min(190px, 100%);
-      display: grid;
-      gap: 0.55rem;
-      justify-items: center;
-    }
-
-    .poster-jump {
-      width: fit-content;
-      font-size: 0.85rem;
-      padding: 0.45rem 0.85rem;
-    }
-
-    .poster-links {
+    .feed-controls {
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.9rem;
     }
 
-    .poster-lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 50;
-      display: grid;
-      place-items: center;
-      padding: 0;
-      background: rgba(8, 22, 28, 0.24);
-      -webkit-backdrop-filter: blur(9px);
-      backdrop-filter: blur(9px);
-    }
-
-    .poster-lightbox[hidden] {
-      display: none;
-    }
-
-    .poster-lightbox img {
-      width: auto;
-      max-width: min(1100px, 96vw);
-      max-height: 92vh;
-      display: block;
-      border: 0;
-      border-radius: 0;
-      background: transparent;
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.3);
-    }
-
-    .poster-lightbox-close {
-      position: absolute;
-      top: 0.9rem;
-      right: 0.9rem;
-      width: 2.2rem;
-      height: 2.2rem;
-      border: 1px solid rgba(220, 235, 230, 0.75);
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--surface);
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.92);
-      color: #0f3138;
-      font-size: 1.35rem;
-      line-height: 1;
+      padding: 0.35rem 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink-soft);
       cursor: pointer;
     }
 
-    .poster-content {
+    .chip.active {
+      color: var(--ink);
+      border-color: rgba(255, 122, 50, 0.5);
+      background: rgba(255, 122, 50, 0.08);
+    }
+
+    .post {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: none;
       display: grid;
+      grid-template-columns: 1fr;
       gap: 0.55rem;
-    }
-
-    .poster-badge {
-      width: fit-content;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 700;
-      color: #0d646a;
-      background: rgba(0, 139, 143, 0.11);
-      border: 1px solid rgba(0, 139, 143, 0.27);
-      border-radius: 999px;
-      padding: 0.26rem 0.6rem;
-    }
-
-    .poster-content h3 {
-      font-size: clamp(1.2rem, 2.1vw, 1.55rem);
-      letter-spacing: -0.01em;
-    }
-
-    .poster-meta {
-      list-style: none;
-      display: grid;
-      gap: 0.28rem;
-      color: #405c64;
-      font-size: 0.94rem;
-      font-weight: 600;
-    }
-
-    .poster-meta strong {
-      color: #113f49;
-    }
-
-    .poster-badge-link {
-      text-decoration: none;
-      color: #0d646a;
-    }
-
-    .poster-badge-link:hover {
-      border-color: rgba(0, 139, 143, 0.45);
-      background: rgba(0, 139, 143, 0.16);
-    }
-
-    .sessions-shell {
-      display: grid;
-      gap: 1.1rem;
-      padding: clamp(0.65rem, 1.8vw, 0.95rem);
-      border: 1px dashed #c5d9d0;
-      border-radius: var(--radius-md);
-      background: linear-gradient(180deg, #f8fcf9, #edf6f1);
-    }
-
-    #kickoff:target,
-    #sesion-2:target {
-      outline: 2px solid rgba(0, 139, 143, 0.34);
-      outline-offset: 3px;
-    }
-
-    main {
-      margin-top: 1.25rem;
-      display: grid;
-      gap: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .section-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: clamp(1rem, 2.5vw, 1.45rem);
-      box-shadow: 0 14px 35px rgba(20, 36, 40, 0.08);
+      padding: 0.9rem 0.2rem;
+      transition: background 140ms ease;
       animation: rise 650ms ease-out both;
     }
 
-    .section-title {
+    .post:first-of-type {
+      border-top: 1px solid var(--line);
+    }
+
+    .post:hover {
+      background: #f3f4f4;
+    }
+
+    .post + .post {
+      margin-top: 0;
+    }
+
+    .post-main {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .post-meta {
       display: flex;
       flex-wrap: wrap;
-      align-items: baseline;
-      gap: 0.6rem;
-      margin-bottom: 0.45rem;
-    }
-
-    h2 {
-      font-size: clamp(1.45rem, 3vw, 2.05rem);
-      letter-spacing: -0.01em;
-    }
-
-    .kicker {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #4d6269;
-      font-weight: 700;
-    }
-
-    .section-desc {
+      gap: 0.5rem;
+      align-items: center;
       color: var(--ink-soft);
-      margin-bottom: 0.95rem;
-    }
-
-    .topics {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-    }
-
-    .topic {
-      background: #fcfffc;
-      border: 1px solid #d4e4dc;
-      border-radius: 14px;
-      padding: 0.95rem;
-      min-height: 100%;
-      display: grid;
-      gap: 0.45rem;
-      animation: rise 700ms ease-out both;
-    }
-
-    .topic:nth-child(1) { animation-delay: 50ms; }
-    .topic:nth-child(2) { animation-delay: 90ms; }
-    .topic:nth-child(3) { animation-delay: 130ms; }
-    .topic:nth-child(4) { animation-delay: 170ms; }
-    .topic:nth-child(5) { animation-delay: 210ms; }
-    .topic:nth-child(6) { animation-delay: 250ms; }
-    .topic:nth-child(7) { animation-delay: 290ms; }
-    .topic:nth-child(8) { animation-delay: 330ms; }
-    .topic:nth-child(9) { animation-delay: 370ms; }
-
-    .topic .meta {
       font-size: 0.76rem;
-      text-transform: uppercase;
-      letter-spacing: 0.055em;
-      font-weight: 700;
-      color: #0e6e74;
+      font-weight: 600;
     }
 
-    .topic h3 {
-      font-size: 1.09rem;
+    .post-flair {
+      background: rgba(0, 139, 143, 0.12);
+      color: #0d646a;
+      border-radius: 999px;
+      padding: 0.15rem 0.55rem;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .post-title {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-size: clamp(1.02rem, 1.6vw, 1.25rem);
       letter-spacing: -0.01em;
     }
 
-    .topic p {
-      color: #557077;
-      font-size: 0.95rem;
-    }
-
-    .session-simple-list {
-      margin: 0.4rem 0 0;
-      padding-left: 1.15rem;
+    .post-body {
+      color: var(--ink-soft);
+      font-size: 0.94rem;
       display: grid;
       gap: 0.45rem;
-      color: #2f4f59;
     }
 
-    .session-simple-list li {
-      line-height: 1.5;
-    }
-
-    .session-simple-list a {
-      color: #0c636b;
-      font-weight: 700;
-      text-underline-offset: 0.18em;
-      word-break: break-word;
-    }
-
-    .resource {
+    .post-list {
+      padding-left: 1.2rem;
       display: grid;
-      gap: 0.85rem;
+      gap: 0.4rem;
+      color: var(--ink);
+    }
+
+    .post-media {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--surface-soft);
+    }
+
+    .post-media figcaption {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      background: var(--surface-soft);
+      border-top: 1px solid var(--line);
+    }
+
+
+    .news-feed {
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 0.4rem;
+    }
+
+    .news-item {
+      display: grid;
+      gap: 0.5rem;
+      padding: 0.8rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: var(--surface-soft);
+    }
+
+    .news-image img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .news-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--ink-soft);
+    }
+
+    .news-source {
+      background: rgba(0, 139, 143, 0.12);
+      color: #0d646a;
+      border-radius: 999px;
+      padding: 0.12rem 0.5rem;
+    }
+
+    .news-tag {
+      background: rgba(255, 122, 50, 0.12);
+      color: var(--accent-2);
+      border-radius: 999px;
+      padding: 0.12rem 0.5rem;
+    }
+
+    .news-title {
+      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+
+    .news-summary {
+      color: var(--ink-soft);
+      font-size: 0.9rem;
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .news-empty {
+      text-align: center;
+      padding: 1rem;
+      color: var(--ink-soft);
+      font-size: 0.9rem;
     }
 
     pre {
-      background: #0f2d35;
-      color: #e6f7f7;
+      background: #111b23;
+      color: #f0f4f8;
       border-radius: 12px;
-      padding: 0.9rem 1rem;
+      padding: 0.8rem 0.9rem;
       overflow-x: auto;
-      border: 1px solid #184853;
       font-family: "Cascadia Code", "Consolas", monospace;
-      font-size: 0.93rem;
+      font-size: 0.9rem;
     }
 
-    .resource a {
-      color: #0c636b;
-      font-weight: 700;
-      text-underline-offset: 0.18em;
-    }
 
     footer {
-      padding: 0.2rem 0 2rem;
-      color: #4f686f;
-      font-size: 0.88rem;
       text-align: center;
+      color: var(--ink-soft);
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
     }
 
     @keyframes rise {
@@ -615,351 +407,231 @@
       }
     }
 
-    .rss-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      margin-left: auto;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: #e3671a;
-      border: 1px solid rgba(227, 103, 26, 0.35);
-      border-radius: 999px;
-      padding: 0.2rem 0.65rem;
-      text-decoration: none;
-      transition: background 160ms, border-color 160ms;
+    @media (max-width: 980px) {
+      .top-actions {
+        margin-left: 0;
+      }
     }
 
-    .rss-btn:hover {
-      background: rgba(227, 103, 26, 0.08);
-      border-color: rgba(227, 103, 26, 0.6);
-    }
-
-    /* ── Hilo de Noticias ─────────────────────────────────────── */
-
-    .news-feed {
-      display: grid;
-      gap: 0.7rem;
-      margin-top: 0.85rem;
-    }
-
-    .news-image {
-      grid-column: 1 / -1;
-      margin-bottom: 0.1rem;
-    }
-
-    .news-image img {
-      width: 100%;
-      max-height: 220px;
-      object-fit: cover;
-      border-radius: calc(var(--radius-sm) - 2px);
-      display: block;
-      border: 1px solid var(--border);
-    }
-
-    .news-item {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0 1.1rem;
-      padding: 0.95rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      background: var(--surface-muted);
-      transition: border-color 180ms, box-shadow 180ms;
-      animation: rise 600ms ease-out both;
-    }
-
-    .news-item:hover {
-      border-color: rgba(0, 139, 143, 0.38);
-      box-shadow: 0 6px 20px rgba(0, 139, 143, 0.1);
-    }
-
-    .news-dot {
-      margin-top: 0.45rem;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .news-body {
-      display: grid;
-      gap: 0.3rem;
-    }
-
-    .news-meta {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.4rem 0.7rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #4d6269;
-    }
-
-    .news-date {
-      letter-spacing: 0.03em;
-    }
-
-    .news-source {
-      color: #0d7277;
-      background: rgba(0, 139, 143, 0.09);
-      border: 1px solid rgba(0, 139, 143, 0.22);
-      border-radius: 999px;
-      padding: 0.1rem 0.48rem;
-    }
-
-    .news-tag {
-      color: #5e5e6a;
-      background: rgba(0, 0, 0, 0.05);
-      border-radius: 999px;
-      padding: 0.1rem 0.42rem;
-      font-size: 0.73rem;
-    }
-
-    .news-title {
-      font-family: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
-      font-size: clamp(1rem, 1.8vw, 1.13rem);
-      letter-spacing: -0.01em;
-      line-height: 1.2;
-    }
-
-    .news-title a {
-      color: var(--ink);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 160ms, color 160ms;
-    }
-
-    .news-title a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .news-summary {
-      color: var(--ink-soft);
-      font-size: 0.93rem;
-      line-height: 1.5;
-    }
-
-    .news-empty {
-      text-align: center;
-      color: var(--ink-soft);
-      padding: 2rem 1rem;
-      font-size: 0.95rem;
-      opacity: 0.7;
-    }
-
-    @media (max-width: 850px) {
-      .hero {
-        padding-right: clamp(1.2rem, 4vw, 2rem);
+    @media (max-width: 720px) {
+      .post {
+        grid-template-columns: 48px 1fr;
       }
 
-      .topics {
-        grid-template-columns: 1fr;
+      .feed {
+        padding: 0 0.1rem;
       }
-
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.45rem;
-      }
-
-      .hero-logo {
-        position: static;
-        width: clamp(114px, 30vw, 150px);
-        justify-self: end;
-        margin-bottom: -0.4rem;
-      }
-
-      .hero::after {
-        right: -4.8rem;
-        top: -3.2rem;
-      }
-
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="page">
     <header class="topbar">
-      <div class="brand">Club <span>de la IA</span></div>
-      <nav>
-        <a href="#noticias">Noticias</a>
-        <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio oficial</a>
-      </nav>
+      <div class="brand">
+        <img src="images/logo/ClubIA_logo.png" alt="Logo del Club de la IA" />
+        <div class="brand-text">
+          <h1>Club de la IA</h1>
+          <p>
+            Documentos de sesiones, propuestas y recursos para debatir el impacto real de la
+            inteligencia artificial en el entorno académico.
+          </p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <a class="btn btn-discord" href="https://discord.gg/4fNzunjj" target="_blank" rel="noopener noreferrer">
+          <span>¡Únete ya!</span>
+          <img class="btn-icon" src="images/logo%20discord%20blanco.png" alt="" aria-hidden="true" />
+        </a>
+        <a class="btn btn-secondary" href="/clubia/feed.xml">RSS</a>
+        <a class="btn btn-outline" href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio</a>
+      </div>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-logo">
-        <img src="images/logo/ClubIA_logo.png" alt="Logo del Club de la IA" />
-      </div>
-      <span class="label">Comunidad y debate</span>
-      <h1 id="hero-title">Club de la IA</h1>
-      <p>
-        Documentos de sesiones, propuestas, proyectos, riesgos y usos responsables
-        de la inteligencia artificial en el entorno académico.
-      </p>
+    <div class="layout">
+      <main class="feed" aria-label="Feed del subreddit">
+        <div class="feed-controls">
+          <span class="chip active">Destacados</span>
+          <span class="chip">Nuevos</span>
+          <span class="chip">Debates</span>
+        </div>
 
-      <div class="hero-actions">
-        <a class="btn btn-discord" href="https://discord.gg/4fNzunjj" target="_blank" rel="noopener noreferrer"><span>¡Únete ya!</span><img class="btn-icon" src="images/logo%20discord%20blanco.png" alt="" aria-hidden="true" /></a>
-      </div>
-    </section>
-
-    <section id="carteles" class="section-card posters-section" aria-labelledby="carteles-title">
-      <div class="section-title">
-        <span class="kicker">Próxima sesión</span>
-        <h2 id="carteles-title">Cartel principal</h2>
-      </div>
-      <p class="section-desc">
-        Cartel destacado de la sesión sobre ciberseguridad post-IA.
-      </p>
-
-      <div class="poster-grid" aria-label="Cartel de la sesión de ciberseguridad post-IA">
-        <article class="poster-card">
-          <div class="poster-frame">
-            <img
-              src="sesiones/20260430_ciberseguridad_postia/poster_ciberseguridad_postia.png"
-              alt="Cartel de la sesión Ciberseguridad post-IA"
-            />
+        <article class="post" id="cartel">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Sesión</span>
+              <span>30 abr 2026</span>
+            </div>
+            <h2 class="post-title">Cartel principal: Ciberseguridad post-IA</h2>
+            <div class="post-body">
+              <p>Cartel destacado de la sesión sobre ciberseguridad post-IA.</p>
+              <figure class="post-media">
+                <img
+                  src="sesiones/20260430_ciberseguridad_postia/poster_ciberseguridad_postia.png"
+                  alt="Cartel de la sesión Ciberseguridad post-IA"
+                />
+                <figcaption>Sesión pública con enfoque en riesgos emergentes y mitigaciones.</figcaption>
+              </figure>
+            </div>
           </div>
         </article>
-      </div>
-    </section>
 
-    <main>
-      <div class="sessions-shell" aria-label="Marco integrado de sesiones 1 y 2">
-        <section id="kickoff" class="section-card" aria-labelledby="kickoff-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 1</span>
-            <h2 id="kickoff-title">Kickoff - 14/04/2026</h2>
+        <article class="post" id="kickoff">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Sesión</span>
+              <span>14 abr 2026</span>
+            </div>
+            <h2 class="post-title">Kickoff: líneas de trabajo aprobadas</h2>
+            <div class="post-body">
+              <p>Primera actividad del club. Estas son las líneas de trabajo acordadas.</p>
+              <ul class="post-list">
+                <li><strong>Dependencia cognitiva de la IA</strong> (sesión pública). Propuesta de Lucía; buscar ponente de Psicología.</li>
+                <li><strong>Oportunidades y amenazas para el sector informático</strong> (sesión pública). Propuesta de Cristian.</li>
+                <li><strong>Ciberseguridad post-IA</strong> (sesión pública). Propuesta de Víctor con intervención de Ale.</li>
+                <li><strong>Qué nos enseña la IA y límites creativos</strong> (sesión pública). Propuesta de Celia y Víctor.</li>
+                <li><strong>Ética en el uso de la IA generativa</strong> (sesión pública). Propuesta de Hugo; buscar ponente.</li>
+                <li><strong>Manual de uso de la IA y curso cero</strong> (proyecto educativo). Guía para la escuela.</li>
+              </ul>
+            </div>
           </div>
-          <p class="section-desc">
-            Primera actividad del club. Estas son las líneas de trabajo que se acordaron para sesiones públicas, experimentos y
-            recursos para la escuela.
-          </p>
+        </article>
 
-          <ul class="session-simple-list" aria-label="Propuestas del kickoff">
-            <li><strong>Dependencia cognitiva de la IA</strong> (sesión pública). Propuesta de Lucía; buscar ponente de Psicología (Dpto. Personalidad).</li>
-            <li><strong>Oportunidades y amenazas para el sector informático</strong> (sesión pública). Propuesta de Cristian para debatir impacto laboral y técnico de la IA.</li>
-            <li><strong>Ciberseguridad post-IA</strong> (sesión pública). Propuesta de Víctor con intervención de Ale.</li>
-            <li><strong>Qué nos enseña la IA y límites en tareas creativas</strong> (sesión pública). Propuesta de Celia y Víctor, con intervención de FV y referencia al documental AlphaFold.</li>
-            <li><strong>Ética en el uso de la IA generativa</strong> (sesión pública). Propuesta de Hugo; buscar ponente (Víctor Muñoz).</li>
-            <li><strong>Manual de uso de la IA y curso cero</strong> (proyecto educativo). Crear una guía para la escuela y plantear un curso cero junto con Linux (OpenBokeron).</li>
-          </ul>
-        </section>
-
-        <section id="sesion-2" class="section-card" aria-labelledby="sesion-2-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 2</span>
-            <h2 id="sesion-2-title">Dependencia cognitiva - 23/04/2026</h2>
+        <article class="post" id="sesion-2">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Debate</span>
+              <span>23 abr 2026</span>
+            </div>
+            <h2 class="post-title">Dependencia cognitiva: conclusiones y recursos</h2>
+            <div class="post-body">
+              <p>
+                Se presentó un vídeo y varios estudios sobre cómo dependemos más de la IA. El debate apuntó a
+                riesgos de pérdida de capacidades mentales y uso de IA en tareas triviales.
+              </p>
+              <ul class="post-list">
+                <li>Incluir estudio de deuda cognitiva en el <strong>Observatorio de riesgos</strong>.</li>
+                <li>Entrevistas a <strong>desarrolladores senior</strong> en empresas malagueñas sobre uso real.</li>
+                <li><strong>La IA puede ser igualitaria</strong> si su uso es inclusivo y responsable.</li>
+                <li>
+                  Vídeo de la sesión:
+                  <a href="https://github.com/fossuma/clubia/tree/main/sesiones/20260423_dependencia_ia/video_sesion_2" target="_blank" rel="noopener noreferrer">repositorio</a>.
+                </li>
+                <li>
+                  Vídeo original:
+                  <a href="https://www.youtube.com/watch?v=4xq6bVbS-Pw" target="_blank" rel="noopener noreferrer">YouTube</a>.
+                </li>
+                <li>
+                  Encuesta sobre dependencia cognitiva:
+                  <a href="https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/" target="_blank" rel="noopener noreferrer">IJS Psych</a>.
+                </li>
+              </ul>
+            </div>
           </div>
-          <p class="section-desc">
-            En esta sesión, se presentó un vídeo y varios estudios que advertían sobre como cada vez <strong> dependemos más de la inteligencia artificial</strong> y esto es un gran problema de cara al futuro debido a que podríamos <strong> perder capacidades mentales</strong>, ya que nuestro cerebro "no hace grandes esfuerzos" en la mayoría de las situaciones, <strong>acudimos a la IA hasta para tareas muy sencillas</strong> como una pequeña búsqueda o cálculo trivial. Debatimos ampliamente sobre este tema y sacamos diversas conclusiones de cara al futuro:
-          </p>
+        </article>
 
-          <ul class="session-simple-list" aria-label="Conclusiones y recursos de la sesión 2">
-            <li>Incluir estudio de deuda cognitiva en el <strong>Observatorio para medir riesgos y evolución en el uso cotidiano de IA</strong>.</li>
-            <li>Realizar entrevistas a <strong>desarrolladores senior</strong> en empresas malagueñas sobre su uso de la IA: más fácil en texto y más complejo en videollamada.</li>
-            <li><strong>La IA es una herramienta potencialmente igualitaria</strong> y puede contribuir a reducir desigualdades si su uso es inclusivo y responsable.</li>
-            <li>Video de la sesión: <a href="https://github.com/fossuma/clubia/tree/main/sesiones/20260423_dependencia_ia/video_sesion_2" target="_blank" rel="noopener noreferrer">https://github.com/fossuma/clubia/tree/main/sesiones/20260423_dependencia_ia/video_sesion_2</a></li>
-            <li>Video original: <a href="https://www.youtube.com/watch?v=4xq6bVbS-Pw" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=4xq6bVbS-Pw</a></li>
-            <li>Encuesta sobre dependencia cognitiva: <a href="https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/" target="_blank" rel="noopener noreferrer">https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/</a></li>
-          </ul> 
-        </section>
-
-        <section id="sesion-3" class="section-card" aria-labelledby="sesion-3-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 3</span>
-            <h2 id="sesion-3-title">Ciberseguridad post-IA - 30/04/2026</h2>
+        <article class="post" id="sesion-3">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Agenda</span>
+              <span>30 abr 2026</span>
+            </div>
+            <h2 class="post-title">Ciberseguridad post-IA: resumen en preparación</h2>
+            <div class="post-body">
+              <p>Estamos recopilando materiales y un resumen de la sesión. Actualizamos en breve.</p>
+            </div>
           </div>
-          <p class="section-desc"></p>
-        </section>
+        </article>
 
-        <section id="sesion-4" class="section-card" aria-labelledby="sesion-4-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 4</span>
-            <h2 id="sesion-4-title">Ética en el uso de la IA generativa - 07/05/2026</h2>
+        <article class="post" id="sesion-4">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Agenda</span>
+              <span>07 may 2026</span>
+            </div>
+            <h2 class="post-title">Ética en el uso de la IA generativa</h2>
+            <div class="post-body">
+              <p>Sesión en preparación. Abrimos hilo para propuestas de casos y lecturas previas.</p>
+            </div>
           </div>
-          <p class="section-desc"></p>
-        </section>
+        </article>
 
-        <section id="sesion-5" class="section-card" aria-labelledby="sesion-5-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 5</span>
-            <h2 id="sesion-5-title">Qué nos enseña la IA - 14/05/2026</h2>
+        <article class="post" id="sesion-5">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Agenda</span>
+              <span>14 may 2026</span>
+            </div>
+            <h2 class="post-title">Qué nos enseña la IA: límites en tareas creativas</h2>
+            <div class="post-body">
+              <p>Sesión en preparación. Sumamos referencias al documental AlphaFold.</p>
+            </div>
           </div>
-          <p class="section-desc"></p>
-        </section>
+        </article>
 
-        <section id="sesion-6" class="section-card" aria-labelledby="sesion-6-title">
-          <div class="section-title">
-            <span class="kicker">Sesión 6</span>
-            <h2 id="sesion-6-title">Oportunidades y amenazas - 21/05/2026</h2>
+        <article class="post" id="sesion-6">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Agenda</span>
+              <span>21 may 2026</span>
+            </div>
+            <h2 class="post-title">Oportunidades y amenazas para el sector informático</h2>
+            <div class="post-body">
+              <p>Hilo abierto para ideas sobre impacto laboral y técnico de la IA.</p>
+            </div>
           </div>
-          <p class="section-desc"></p>
-        </section>
-      </div>
+        </article>
 
-      <section id="noticias" class="section-card" aria-labelledby="noticias-title">
-        <div class="section-title">
-          <span class="kicker">Actualidad</span>
-          <h2 id="noticias-title">Hilo de noticias</h2>
-          <a href="/clubia/feed.xml" class="rss-btn" title="Suscribirse por RSS" aria-label="Feed RSS">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3a1 1 0 0 0 0 2 16 16 0 0 1 16 16 1 1 0 0 0 2 0A18 18 0 0 0 3 3zm0 6a1 1 0 0 0 0 2 10 10 0 0 1 10 10 1 1 0 0 0 2 0A12 12 0 0 0 3 9zm0 6a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
-            RSS
-          </a>
-        </div>
-        <p class="section-desc">
-          Selección de artículos y recursos de interés curada por el equipo del club.
-        </p>
-        <div class="news-feed" id="news-feed" aria-label="Hilo de noticias seleccionadas">
-          <p class="news-empty">Cargando noticias…</p>
-        </div>
-      </section>
+        <article class="post" id="noticias">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Noticias</span>
+            </div>
+            <h2 class="post-title">Hilo de noticias y recursos recientes</h2>
+            <div class="post-body">
+              <p>Selección de artículos y recursos curados por el equipo del club.</p>
+              <div class="news-feed" id="news-feed" aria-label="Hilo de noticias seleccionadas">
+                <p class="news-empty">Cargando noticias…</p>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <section id="enlaces" class="section-card resource" aria-labelledby="enlaces-title">
-        <div class="section-title">
-          <span class="kicker">Herramientas</span>
-          <h2 id="enlaces-title">Enlaces y contribución</h2>
-        </div>
-        <p class="section-desc">
-          Para participar en la documentación del club, clona el repositorio y comparte propuestas para siguientes sesiones.
-        </p>
-        <pre><code>git clone https://github.com/umafoss/clubia.git</code></pre>
-        <p>
-          Si ya formas parte del club, puedes abrir issues o pull requests en
-          <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">github.com/umafoss/clubia</a>.
-        </p>
-      </section>
-    </main>
+        <article class="post" id="enlaces">
+          <div class="post-main">
+            <div class="post-meta">
+              <span class="post-flair">Contribución</span>
+            </div>
+            <h2 class="post-title">Enlaces y contribución al repositorio</h2>
+            <div class="post-body">
+              <p>Para participar en la documentación del club, clona el repositorio y comparte propuestas.</p>
+              <pre><code>git clone https://github.com/umafoss/clubia.git</code></pre>
+              <p>
+                Si ya formas parte del club, puedes abrir issues o pull requests en
+                <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">github.com/umafoss/clubia</a>.
+              </p>
+            </div>
+          </div>
+        </article>
+      </main>
+
+    </div>
 
     <footer>
-      Club de la IA · Documentación viva de sesiones, debates y proyectos.
+      Club de la IA - Documentación viva de sesiones, debates y proyectos.
     </footer>
   </div>
 
-  <!-- ── Script: carga noticias desde noticias.json (generado por GitHub Action) ── -->
   <script>
     (async function loadNews() {
       const feed = document.getElementById("news-feed");
 
-      // Markdown mínimo → HTML
       function miniMd(md) {
-        // Procesa imágenes como bloques independientes (fuera de <p>)
         const imgRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
         const parts = md.split(imgRegex);
-        // split con grupos capturantes: [texto, alt, src, texto, alt, src, ...]
         let result = "";
         for (let i = 0; i < parts.length; i++) {
           if (i % 3 === 0) {
-            // Texto normal — aplica markdown y envuelve en párrafos
             const text = parts[i]
               .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
               .replace(/\*(.*?)\*/g, "<em>$1</em>")
@@ -967,12 +639,11 @@
             const paras = text.split(/\n{2,}/).map(p => p.trim()).filter(Boolean);
             result += paras.map(p => `<p>${p}</p>`).join("\n");
           } else if (i % 3 === 1) {
-            // alt text — lo usamos en el siguiente paso
+            // alt text
           } else {
-            // src — construimos el <img>
             const alt = parts[i - 1];
             const src = parts[i];
-            result += `<img src="${src}" alt="${alt}" style="max-width:100%;border-radius:6px;margin:0.6rem 0;">`;
+            result += `<img src="${src}" alt="${alt}" style="max-width:100%;border-radius:10px;margin:0.5rem 0;">`;
           }
         }
         return result;
@@ -997,23 +668,19 @@
         feed.innerHTML = posts.map((p, i) => `
           <article class="news-item" style="animation-delay:${i * 55}ms">
             ${p.image ? `<div class="news-image"><img src="${p.image}" alt="" loading="lazy"></div>` : ""}
-            <div class="news-dot" aria-hidden="true"></div>
-            <div class="news-body">
-              <div class="news-meta">
-                ${p.date ? `<span class="news-date">${formatDate(p.date)}</span>` : ""}
-                ${p.source ? `<span class="news-source">${p.source}</span>` : ""}
-                ${(p.tags || []).map(t => `<span class="news-tag">${t}</span>`).join("")}
-              </div>
-              <h3 class="news-title">
-                ${p.url
-                  ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.title || "Sin título"}</a>`
-                  : (p.title || "Sin título")}
-              </h3>
-              ${p.body ? `<div class="news-summary">${miniMd(p.body)}</div>` : ""}
+            <div class="news-meta">
+              ${p.date ? `<span class="news-date">${formatDate(p.date)}</span>` : ""}
+              ${p.source ? `<span class="news-source">${p.source}</span>` : ""}
+              ${(p.tags || []).map(t => `<span class="news-tag">${t}</span>`).join("")}
             </div>
+            <div class="news-title">
+              ${p.url
+                ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer">${p.title || "Sin título"}</a>`
+                : (p.title || "Sin título")}
+            </div>
+            ${p.body ? `<div class="news-summary">${miniMd(p.body)}</div>` : ""}
           </article>
         `).join("");
-
       } catch (err) {
         feed.innerHTML = '<p class="news-empty">Todavía no hay noticias publicadas.</p>';
         console.warn("noticias.json:", err.message);
