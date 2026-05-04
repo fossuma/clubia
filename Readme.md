@@ -41,6 +41,20 @@ Hemos realizado el primer debate del club relacionado con la dependencia cogniti
 
     3. Conclusión del debate: La IA como herramienta potencialmente igualitaria puede contribuir a reducir desigualdades si su acceso, formación y uso responsable se fomentan de manera inclusiva.
 
+### 1.2 Ciberseguridad post-IA (30/04/2026):
+
+
+En esta sesión hemos debatido sobre el sector de la ciberseguridad post-IA y los cambios que esta ha traído al sector con un experto en ciberseguridad e IA del equipo de VirusTotal, https://alejandrogp.com/about/
+
+    1. Debate sobre algunas de las herramientas más importantes hoy en día en ciberseguridad, destacando Mythos.
+
+    2. Presentación de algunos conceptos clave de ciberseguridad para entender las nuevas técnicas en el sector.
+    
+    3. Aclaraciones sobre la incertidumbre que traen algunos avances de diferentes organizaciones y su impacto real.
+            
+    4. Por último, llegamos de nuevo a la misma conclusión que debates anteriores, la IA como herramienta que crea y cambia perspectivas pero no destruye.
+
+
 ----------------------------------
 
 ## 2. Herramientas y enlaces
