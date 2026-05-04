@@ -1,0 +1,158 @@
+% compilar con lualatex poster.tex
+
+\documentclass[a4paper]{article}
+
+\usepackage[a4paper, margin=1.5cm, top=0.8cm]{geometry}
+\usepackage{graphicx}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{mdframed}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{calc}
+\usepackage{anyfontsize}
+\usepackage{fontspec}
+\usepackage{emoji}
+
+\setmainfont{Latin Modern Roman}[SmallCapsFont={Latin Modern Roman Caps}]
+
+\pagecolor{white}
+\color{black}
+
+\pagestyle{empty}
+
+\newif\ifmostrarinfo
+% Cambia \mostrarinfotrue a \mostrarinfofalse para ocultar la tabla al final del póster
+\mostrarinfofalse
+
+% Custom thick rule
+\newcommand{\thickrule}{\noindent\rule{\linewidth}{2.5pt}}
+\newcommand{\thinrule}{\noindent\rule{\linewidth}{0.6pt}}
+
+\begin{document}
+
+\begin{center}
+
+%% ── TOP RULE ──────────────────────────────────────────────────────────────
+\thickrule
+\vspace{2pt}
+\thinrule
+
+\vspace{10pt}
+
+%% ── LOGO + CLUB NAME ──────────────────────────────────────────────────────
+\begin{minipage}[c]{0.22\textwidth}
+  \centering
+  \includegraphics[width=3.5cm]{../../images/logo/ClubIA_logo_solo.png}
+\end{minipage}%
+\hspace{0.04\textwidth}%
+\begin{minipage}[c]{0.70\textwidth}
+  {\fontsize{30}{42}\selectfont\bfseries ClubIA}\\[4pt]
+  {\fontsize{20}{17}\selectfont\scshape ETSI Inform\'atica}\\[6pt]
+  {\fontsize{16}{14}\selectfont\itshape
+    Estudiantes de inform\'atica que quieren entender\\
+    c\'omo la IA est\'a transformando el sector}
+\end{minipage}
+
+\vspace{10pt}
+\thinrule
+\vspace{2pt}
+\thickrule
+
+\vspace{10pt}
+
+%% ── PRIMERA SESIÓN badge ───────────────────────────────────────────────────
+\ifmostrarinfo
+  \fbox{%
+    \parbox{0.55\textwidth}{%
+      \centering\vspace{6pt}
+      {\fontsize{18}{15}\selectfont\bfseries\scshape \#\,Primera\,Sesi\'on}
+      \vspace{6pt}
+    }%
+  }
+
+  \vspace{40pt}
+\fi
+
+%% ── TOPIC ─────────────────────────────────────────────────────────────────
+\includegraphics[height=0.30\paperheight]{imagen_etica.png}
+
+\vspace{8pt}
+{\color[RGB]{20,60,120}\fontsize{56}{62}\selectfont\bfseries
+  Ética en IA}
+
+\vspace{28pt}
+{\color[RGB]{80,120,180}\fontsize{30}{24}\selectfont
+  \textit{¿Creamos máquinas justas? }} {\fontsize{24}{28}\selectfont\emoji{thinking-face}}
+
+\vspace{30pt}
+\thinrule
+\vspace{14pt}
+
+%% ── SESSION DATA ──────────────────────────────────────────────────────────
+\begin{tabular}{ccc}
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{22}{26}\selectfont\bfseries 7 de mayo}
+  \end{minipage}
+  &
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{22}{26}\selectfont\bfseries 20:00\,h}
+  \end{minipage}
+  &
+  \begin{minipage}{0.28\textwidth}\centering
+    {\fontsize{17}{21}\selectfont\bfseries Sala de}\\
+    {\fontsize{17}{21}\selectfont\bfseries Reuniones B}
+  \end{minipage}
+\end{tabular}
+
+\vspace{14pt}
+\thinrule
+\vspace{15pt}
+
+%% ── STRUCTURE ─────────────────────────────────────────────────────────────
+\ifmostrarinfo
+  {\fontsize{15}{13}\selectfont\scshape Estructura de la sesi\'on}
+
+  \vspace{10pt}
+
+  {\fontsize{15}{10}\selectfont
+  \begin{tabular}{>{\centering\arraybackslash}p{0.20\textwidth}%
+                  >{\centering\arraybackslash}p{0.20\textwidth}%
+                  >{\centering\arraybackslash}p{0.20\textwidth}%
+                  >{\centering\arraybackslash}p{0.20\textwidth}}
+    \midrule[1.2pt]
+    \rule{0pt}{14pt}%
+    {\bfseries 01} & {\bfseries 02} & {\bfseries 03} & {\bfseries 04}\\[3pt]
+    V\'{\i}deo &
+    Art\'{\i}culos &
+    Debate &
+    Conclusiones\\[6pt]
+    \midrule[1.2pt]
+  \end{tabular}
+  }
+\fi
+
+\vspace{6pt}
+{\fontsize{15}{12}\selectfont
+  \textit{No necesitas conocimientos previos~---~solo ganas de aprender.}}
+
+\vspace{10pt}
+\includegraphics[width=3cm]{../../images/qr.png}\\[1pt]
+\ifmostrarinfo
+  {\color[RGB]{20,60,120}\fontsize{10}{10}\selectfont\scshape \'unete al club}
+  \vspace{18pt}
+\fi
+
+%% ── FOOTER ────────────────────────────────────────────────────────────────
+{\fontsize{15}{11}\selectfont
+  Entrada libre y gratuita · Abierto a toda la comunidad universitaria\\[2pt]
+  \textbf{ClubIA} · ETSI Inform\'atica · Universidad de M\'alaga}
+
+\end{center}
+
+\end{document}
