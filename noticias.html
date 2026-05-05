@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ClubIA — Blog del Club de la IA</title>
+  <title>ClubIA — Noticias</title>
   <link rel="alternate" type="application/rss+xml" title="Club de la IA — Hilo de noticias" href="/clubia/feed.xml" />
   <meta
     name="description"
-    content="Club de la IA en formato subreddit: sesiones, propuestas y recursos sobre el impacto real de la inteligencia artificial."
+    content="Noticias completas del Club de la IA: articulos, recursos y enlaces sobre el impacto real de la inteligencia artificial."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -246,6 +246,11 @@
       transform: translateY(-1px);
     }
 
+    .btn-sm {
+      font-size: 0.82rem;
+      padding: 0.45rem 0.95rem;
+    }
+
     .layout {
       display: block;
     }
@@ -253,75 +258,10 @@
     .feed {
       max-width: 980px;
       margin: 0 auto;
-      padding: 0.6rem 0.9rem;
+      padding: 1.2rem 1.4rem 1.6rem;
       background: var(--surface);
       border-radius: var(--radius);
-    }
-
-    .feed-controls {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.9rem;
-    }
-
-    .chip {
       border: 1px solid var(--line);
-      background: var(--surface);
-      border-radius: 999px;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--ink-soft);
-      cursor: pointer;
-    }
-
-    .chip.active {
-      color: var(--ink);
-      border-color: rgba(255, 122, 50, 0.5);
-      background: rgba(255, 122, 50, 0.08);
-    }
-
-    .post {
-      background: transparent;
-      border: 0;
-      border-bottom: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      box-shadow: none;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0.55rem;
-      padding: 0.9rem 0.2rem;
-      transition: background 140ms ease;
-      animation: rise 650ms ease-out both;
-    }
-
-    .post:first-of-type {
-      border-top: 1px solid var(--line);
-    }
-
-    .post:hover {
-      background: var(--post-hover);
-    }
-
-    .post + .post {
-      margin-top: 0.4rem;
-    }
-
-    .post-main {
-      display: grid;
-      gap: 0.6rem;
-    }
-
-    .post-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      align-items: center;
-      color: var(--ink-soft);
-      font-size: 0.76rem;
-      font-weight: 600;
     }
 
     .post-flair {
@@ -332,56 +272,7 @@
       font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-    }
-
-    .post-title {
-      font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
-      font-size: clamp(1.02rem, 1.6vw, 1.25rem);
-      letter-spacing: -0.01em;
-    }
-
-    .post-body {
-      color: var(--ink-soft);
-      font-size: 0.94rem;
-      display: grid;
-      gap: 0.45rem;
-    }
-
-    .post-list {
-      padding-left: 1.2rem;
-      display: grid;
-      gap: 0.4rem;
-      color: var(--ink);
-    }
-
-    .post-media {
-      border: 1px solid var(--line);
-      border-radius: var(--radius-sm);
-      overflow: hidden;
-      background: var(--surface-soft);
-    }
-
-    .post-media figcaption {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-      background: var(--surface-soft);
-      border-top: 1px solid var(--line);
-    }
-
-    .news-spotlight {
-      max-width: 980px;
-      width: min(980px, 92vw);
-      margin: 0 auto;
-      margin-bottom: 2.4rem;
-      padding: 1.4rem 1.4rem 1.6rem;
-      background: var(--surface);
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      min-height: 250px;
-      display: grid;
-      align-content: start;
-      gap: 1rem;
+      font-weight: 700;
     }
 
     .news-spotlight-header {
@@ -390,6 +281,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.8rem 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .news-spotlight-title {
@@ -398,60 +290,16 @@
       letter-spacing: -0.02em;
     }
 
-    .news-spotlight-title a {
-      color: inherit;
-    }
-
-    .news-spotlight-title a:hover {
-      color: var(--accent);
-    }
-
     .news-spotlight-subtitle {
       color: var(--ink-soft);
       max-width: 60ch;
       margin-top: 0.35rem;
     }
 
-    .btn-sm {
-      font-size: 0.82rem;
-      padding: 0.45rem 0.95rem;
-    }
-
-
     .news-feed {
       display: grid;
       gap: 0.75rem;
       margin-top: 0.4rem;
-    }
-
-    .news-spotlight .news-feed {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-      margin-top: 0.6rem;
-    }
-
-    .news-spotlight .news-item {
-      aspect-ratio: 1 / 1;
-      align-content: start;
-      padding: 0.95rem;
-      overflow: hidden;
-    }
-
-    .news-spotlight .news-image {
-      display: none;
-    }
-
-    .news-spotlight .news-title {
-      font-size: 0.95rem;
-    }
-
-    .news-spotlight .news-summary {
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
 
     .news-item {
@@ -514,17 +362,6 @@
       font-size: 0.9rem;
     }
 
-    pre {
-      background: var(--code-bg);
-      color: var(--code-ink);
-      border-radius: 12px;
-      padding: 0.8rem 0.9rem;
-      overflow-x: auto;
-      font-family: "Cascadia Code", "Consolas", monospace;
-      font-size: 0.9rem;
-    }
-
-
     footer {
       text-align: center;
       color: var(--ink-soft);
@@ -564,20 +401,6 @@
         margin-left: 0;
       }
     }
-
-    @media (max-width: 720px) {
-      .post {
-        grid-template-columns: 48px 1fr;
-      }
-
-      .feed {
-        padding: 0 0.1rem;
-      }
-
-      .news-spotlight .news-feed {
-        grid-template-columns: 1fr;
-      }
-    }
   </style>
 </head>
 
@@ -601,170 +424,26 @@
           <span>¡Únete ya!</span>
           <img class="btn-icon" src="images/logo%20discord%20blanco.png" alt="" aria-hidden="true" />
         </a>
+        <a class="btn btn-outline" href="index.html">Inicio</a>
         <a class="btn btn-secondary" href="/clubia/feed.xml">RSS</a>
         <a class="btn btn-outline" href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">Repositorio</a>
       </div>
     </header>
 
     <div class="layout">
-      <section class="news-spotlight" id="noticias" aria-label="Noticias recientes del Club de la IA">
+      <main class="feed" aria-label="Todas las noticias del Club de la IA">
         <div class="news-spotlight-header">
           <div>
             <span class="post-flair">Noticias</span>
-            <h2 class="news-spotlight-title"><a href="noticias.html">Noticias recientes</a></h2>
+            <h2 class="news-spotlight-title">Todas las noticias publicadas</h2>
+            <p class="news-spotlight-subtitle">Hilo completo de articulos y recursos publicados en la web del club.</p>
           </div>
-          <a class="btn btn-outline btn-sm" href="noticias.html">Ver todas</a>
+          <a class="btn btn-outline btn-sm" href="index.html">Volver al inicio</a>
         </div>
-        <div class="news-feed" id="news-feed" data-limit="3" aria-label="Hilo de noticias seleccionadas">
+        <div class="news-feed" id="news-feed" aria-label="Todas las noticias">
           <p class="news-empty">Cargando noticias...</p>
         </div>
-      </section>
-      <main class="feed" aria-label="Feed del subreddit">
-
-        <article class="post" id="cartel">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Sesión</span>
-              <span>30 abr 2026</span>
-            </div>
-            <h2 class="post-title">Cartel principal: Ciberseguridad post-IA</h2>
-            <div class="post-body">
-              <p>Cartel destacado de la sesión sobre ciberseguridad post-IA.</p>
-              <figure class="post-media">
-                <img
-                  src="sesiones/20260430_ciberseguridad_postia/poster_ciberseguridad_postia.png"
-                  alt="Cartel de la sesión Ciberseguridad post-IA"
-                />
-                <figcaption>Sesión pública con enfoque en riesgos emergentes y mitigaciones.</figcaption>
-              </figure>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="kickoff">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Sesión</span>
-              <span>14 abr 2026</span>
-            </div>
-            <h2 class="post-title">Kickoff: líneas de trabajo aprobadas</h2>
-            <div class="post-body">
-              <p>Primera actividad del club. Estas son las líneas de trabajo acordadas.</p>
-              <ul class="post-list">
-                <li><strong>Dependencia cognitiva de la IA</strong> (sesión pública). Propuesta de Lucía; buscar ponente de Psicología.</li>
-                <li><strong>Oportunidades y amenazas para el sector informático</strong> (sesión pública). Propuesta de Cristian.</li>
-                <li><strong>Ciberseguridad post-IA</strong> (sesión pública). Propuesta de Víctor con intervención de Ale.</li>
-                <li><strong>Qué nos enseña la IA y límites creativos</strong> (sesión pública). Propuesta de Celia y Víctor.</li>
-                <li><strong>Ética en el uso de la IA generativa</strong> (sesión pública). Propuesta de Hugo; buscar ponente.</li>
-                <li><strong>Manual de uso de la IA y curso cero</strong> (proyecto educativo). Guía para la escuela.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="sesion-2">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Debate</span>
-              <span>23 abr 2026</span>
-            </div>
-            <h2 class="post-title">Dependencia cognitiva: conclusiones y recursos</h2>
-            <div class="post-body">
-              <p>
-                Se presentó un vídeo y varios estudios sobre cómo dependemos más de la IA. El debate apuntó a
-                riesgos de pérdida de capacidades mentales y uso de IA en tareas triviales.
-              </p>
-              <ul class="post-list">
-                <li>Incluir estudio de deuda cognitiva en el <strong>Observatorio de riesgos</strong>.</li>
-                <li>Entrevistas a <strong>desarrolladores senior</strong> en empresas malagueñas sobre uso real.</li>
-                <li><strong>La IA puede ser igualitaria</strong> si su uso es inclusivo y responsable.</li>
-                <li>
-                  Vídeo de la sesión:
-                  <a href="https://github.com/fossuma/clubia/tree/main/sesiones/20260423_dependencia_ia/video_sesion_2" target="_blank" rel="noopener noreferrer">repositorio</a>.
-                </li>
-                <li>
-                  Vídeo original:
-                  <a href="https://www.youtube.com/watch?v=4xq6bVbS-Pw" target="_blank" rel="noopener noreferrer">YouTube</a>.
-                </li>
-                <li>
-                  Encuesta sobre dependencia cognitiva:
-                  <a href="https://journals.co.za/doi/full/10.38140/ijspsy.v5i3.2106/" target="_blank" rel="noopener noreferrer">IJS Psych</a>.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="sesion-3">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Agenda</span>
-              <span>30 abr 2026</span>
-            </div>
-            <h2 class="post-title">Ciberseguridad post-IA: resumen en preparación</h2>
-            <div class="post-body">
-              <p>Estamos recopilando materiales y un resumen de la sesión. Actualizamos en breve.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="sesion-4">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Agenda</span>
-              <span>07 may 2026</span>
-            </div>
-            <h2 class="post-title">Ética en el uso de la IA generativa</h2>
-            <div class="post-body">
-              <p>Sesión en preparación. Abrimos hilo para propuestas de casos y lecturas previas.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="sesion-5">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Agenda</span>
-              <span>14 may 2026</span>
-            </div>
-            <h2 class="post-title">Qué nos enseña la IA: límites en tareas creativas</h2>
-            <div class="post-body">
-              <p>Sesión en preparación. Sumamos referencias al documental AlphaFold.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="sesion-6">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Agenda</span>
-              <span>21 may 2026</span>
-            </div>
-            <h2 class="post-title">Oportunidades y amenazas para el sector informático</h2>
-            <div class="post-body">
-              <p>Hilo abierto para ideas sobre impacto laboral y técnico de la IA.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="post" id="enlaces">
-          <div class="post-main">
-            <div class="post-meta">
-              <span class="post-flair">Contribución</span>
-            </div>
-            <h2 class="post-title">Enlaces y contribución al repositorio</h2>
-            <div class="post-body">
-              <p>Para participar en la documentación del club, clona el repositorio y comparte propuestas.</p>
-              <pre><code>git clone https://github.com/umafoss/clubia.git</code></pre>
-              <p>
-                Si ya formas parte del club, puedes abrir issues o pull requests en
-                <a href="https://github.com/umafoss/clubia" target="_blank" rel="noopener noreferrer">github.com/umafoss/clubia</a>.
-              </p>
-            </div>
-          </div>
-        </article>
       </main>
-
     </div>
 
     <footer>
